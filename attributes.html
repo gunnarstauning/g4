@@ -1,1 +1,28 @@
+<html>
+	<style>
+		body {
+			background-color: white;
+			color: #101010;
+			
+		}
 
+		.dark-mode {
+			background-color: #101010;
+			color: white;
+		}
+	</style>
+
+	<button onclick="toggleDarkMode()">Dark mode</button>
+		
+		<script>
+			function toggleDarkMode() {
+				var element = document.body;
+				element.classList.toggle("dark-mode")
+			}
+
+		</script>
+
+	<p>hello stranger</p>
+	<p>it's been a while</p>
+
+</html>
