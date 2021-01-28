@@ -1,13 +1,88 @@
+<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		float: left;
+	}
+	.navbar{
+		background-color: rgb(104, 142, 255);
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+		text-decoration: none;
+		font-family:Verdana, Geneva, Tahoma, sans-serif;
+	}
+	li a {
+		display: inline-block;
+	}
+	li a:hover {background-color: #e20c0c;}
+	
+	.dropbtn {
+		background-color: rgb(104, 142, 255);
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	}
+
+	.dropdown{
+		position:relative;
+		display: inline-block;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: rgb(104, 142, 255);
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		font-family:Verdana, Geneva, Tahoma, sans-serif;
+	}
+	.dropdown-content a {
+		color: rgb(255, 255, 255);
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	.dropdown-content a:hover {background-color: #e71111}
+	.dropdown:hover .dropdown-content {
+		display:block;
+	}
+	.dropdown:hover .dropbtn {
+		background-color: #e20c0c;
+	}
+</style>
+
 <body>
 	
 	<img src="logo-dark.png" width="150">
 
 
 	<ul>
-		<li><a href=index.html>home</a></li>
-		<li><a href=nested.html>nested examples</a></li>
-		<li><a href=attributes.html>attribute examples</a></li>
-		<li><a href=tags.html>Our tags</a></li>
+		<li><a class="navBar" href=index.html>Home</a></li>
+		<li><a class="navBar" href=nested.html>Nested</a></li>
+		<li><a class="navBar" href=attributes.html>Attribute</a></li>
+		<li><a class="navBar" href=tags.html>Tags</a></li>
+		<li>
+			<div class="dropdown">
+			<button class="dropbtn">The Team</button>
+			<div class="dropdown-content">
+				<a href=team/elias.html>Elias</a>
+				<a href=team/gunnar.html>Gunnar</a>
+				<a href=team/jessica.html>Jessica</a>
+				<a href=team/logan.html>Logan</a>
+				<a href=team/nic.html>Nic</a>
+				<a href=team/sarah.html>Sarah</a>
+			</div>
+		  </div>
+		</li>
 		<!-- <li><a href=team/elias.html>Elias's page</a></li>
 		<li><a href=team/gunnar.html>Gunnar's page</a></li>
 		<li><a href=team/jessica.html>Jessica's page</a></li>
