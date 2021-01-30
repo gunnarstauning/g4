@@ -7,11 +7,11 @@
 			color: #101010;
 			
 		}
-
 		.dark-mode {
 			background-color: #101010;
 			color: white;
 		}
+
 		#GunnarAttributes{
 			background-color:lightgrey;
 			margin-bottom: 10px;
@@ -21,6 +21,18 @@
 			font-size: xx-large;
 			font-family: 'Times New Roman', Times, serif;
 		}
+
+		/* Elias's gallery */
+		.h3_gallery{
+			text-shadow: 2px;
+			font-size: xx-large;
+			font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
+		}
+		.image-artwork {
+			padding: 50px;
+			height: 300px;
+		}
+
 		.jess_stuff{
 			color:white;
 			font-size: 40px;
@@ -34,19 +46,23 @@
 		}
 	</style>
 
+	<!-- Dark mode button-->
 	<button onclick="toggleDarkMode()">Dark mode</button>
-		
-		<script>
-			function toggleDarkMode() {
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-			}
+	<script>
+		function toggleDarkMode() {
+			var element = document.body;
+			element.classList.toggle("dark-mode")
+		}
+	</script>
 
-		</script>
 
-	<p>hello stranger</p>
-	<p>it's been a while</p>
+	
 
+	<br>
+	<br>
+
+
+	<!-- Gunnar's Section-->
 	<div id="GunnarAttributes">
 		<p title="I'm an important paragraph">
 			<h3 lang="en" class="h3_small" style="text-align: center;">Gunnar's Favorite Attributes</h3>
@@ -60,6 +76,12 @@
 		</p>
 	</div>
 		
+
+	<br>
+	<br>
+
+
+	<!-- Sarah's Section-->
 	<div>
 		<p title="What's this about" style="text-align: center;">Sarah's Attributes</p>
 		<img src="Images/CATS.png" width="100" height="150" alt="Images/Lul.jpg">
@@ -87,4 +109,30 @@
 		<h2 style= "color:#171e31">this is just for page room :)))))))))</h2>
 
 	</div>
+
+	<br>
+	<br>
+
+
+	<!-- Elias's Section-->
+	<div id="EliasAttributes">
+		<p id="Paragraph attribute">
+			<h3 class="h3_gallery" style="text-align: left;">A gallery of Elias' favorite paintings on his computer</h3>
+			<p>Select a painting to learn more about the artist.</p>
+			<a href="https://en.wikipedia.org/wiki/Vincent_van_Gogh" target = "_self">
+				<img class="image-artwork" src="Images/elias-images/vincent.jpg" alt="Vincent van Gogh self portrait">
+			</a>
+			<a href="https://en.wikipedia.org/wiki/Joseph_Wright_of_Derby" target = "_self"></a>
+				<img class="image-artwork" src="Images/elias-images/joseph-wright.jpg" alt="Landscape painting by Joseph Wright">
+			</a>
+			<a href="https://en.wikipedia.org/wiki/Marcel_Duchamp" target = "_self">
+				<img class="image-artwork" src="Images/elias-images/duchamp-nudedescending.jpg" alt="Nude Descending A Staircase">
+			</a>
+			<a href="https://en.wikipedia.org/wiki/Claude_Monet" target = "_self">
+				<img class="image-artwork" src="Images/elias-images/claude-monet.jpg" alt="Landscape painting by Claude Monet">
+			</a>
+		</p>
+	</div>
+
+	<a href=https://gunnarstauning.github.io/g4/index.html><button>Back to the main page</button></a>
 </html>
