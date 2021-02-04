@@ -2,13 +2,15 @@
 	margin-left: 70px;
 	margin-right: 70px;
 }
-
 .logo-header {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
 	height: 100px;
 	width: auto;
 }
 .main-site-navbar {
-
 }
 .nav-list {
 	list-style-type: none;
@@ -16,5 +18,21 @@
 	margin: 0;
 }
 .main-nav-link {
+
+}
+
+
+
+/* Team pages relate */
+
+.member-nameplate {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 42px;
+}
+.member-slogan {
+	font-family: 'Comic Sans,'
+	font-size: 32px;
+}
+.member-description {
 
 }
