@@ -10,9 +10,6 @@ li {
 	float:left;
 }
 .navbar{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
 	background-color: rgb(25, 68, 115);
 	color: white;
 	padding: 16px;
