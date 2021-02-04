@@ -93,9 +93,9 @@ li a:hover {background-color: #e26b62;}
 	font-size: 42px;
 }
 .member-slogan {
-	font-family: 'Comic Sans,'
+	font-family: 'Comic Sans,';
 	font-size: 32px;
 }
 .member-description {
-
+	font-size: 16px;
 }
