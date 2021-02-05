@@ -20,7 +20,8 @@ li {
 	cursor: pointer;
 	text-decoration: none;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 li a {
 	display: inline-block;
