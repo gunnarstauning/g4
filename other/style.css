@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&display=swap');
 body{
 	background-color: #96bbbb;
 	text-align: center;
@@ -114,24 +116,44 @@ li a:hover {background-color: #e26b62;}
 /* Team pages relate */
 
 .content-nameplate {
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 42px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 50px;
+	padding-top: 10px;
+	color: #194473;
 }
 .content-slogan {
-	font-family: 'Comic Sans,';
+	font-family: 'Hammersmith One', sans-serif;
 	font-size: 32px;
+	color: #194473;
 }
 .content-description {
 	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
 }
 
 /* Gunnar's Custom Styles */
-.gunnar-primary-div{
-	background-color:#96bbbb;
+.gunnar-primary{
+	background: rgba(25, 68, 115, .7);
+	margin-left:auto;
+	margin-right:auto;
+	width: 80%;
+	height: 30px;
+	border-radius:10px;
 }
-#gunnarID1{
-	background-color:#0E2222;
+#gunnarHRID{
+	display: block;
+  	margin-top: 0.5em;
+  	margin-bottom: 0.5em;
+  	margin-left: auto;
+  	margin-right: auto;
+  	border: 3px solid  rgb(25, 68, 115);
+	border-radius: 5px;
 }
 #gunnarID2{
-	background-color:#e26b62;
+	background: rgba(226, 107, 98, .7);
+	margin-left:auto;
+	margin-right:auto;
+	width: 80%;
+	height: 30px;
+	border-radius:10px;
 }
