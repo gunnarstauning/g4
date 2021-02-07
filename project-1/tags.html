@@ -1,19 +1,160 @@
 <DOCTYPE html>
 <html>
     <head>
-        <div style="background-color: #ffe2d6;">
-            <h1>Jump to your favorite team member!</h1>
-                <ul>
-                    <li><a href="#Gunner"><strong>Gunnar</strong></a></li>
-                    <li><a href="#Elias" ><strong>Elias</strong></a></li>
-                    <li><a href="#Sarah" ><strong>Sarah</strong></a></li>
-                    <li><a href="#Jessica" ><strong>Jessica</strong></a></li>
-                    <li><a href="#Nic" ><strong>Nic</strong></a></li>
-                    <li><a href="#Logan" ><strong>Logan</strong></a></li>
-                    <li><a href=https://gunnarstauning.github.io/g4/index.html><strong>Return to Main</strong></a></li>
-                </ul>
-        </div>
     </head>
+
+    <style>
+        body{
+            background-color: #96bbbb;
+        
+        }
+        
+        #A{
+            text-align: center;
+        }
+        .dark-mode {
+            background-color: #0E2222;
+            color: white;
+        }
+        .navbar{
+            background-color: rgb(25, 68, 115);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            text-decoration: none;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        
+        }
+        #navbarBG{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(25, 68, 115);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .dropbtn {
+            background-color: rgb(25, 68, 115);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-decoration:underline;
+            border-radius: 50%;
+        }
+        .dropdown{
+            position:relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content a {
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #e26b62}
+        .dropdown:hover .dropdown-content {
+            display:block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color:  #e26b62;
+        }
+                </style>
+
+    <div id="A">
+        <img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo">
+    
+        <div class="navbar" id="navbarBG">
+            <div class="dropdown">
+                <a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
+            </div>
+    
+            <div class="dropdown">
+                <button class="dropbtn">&#60;Our Team&#62;</button>
+                <div class="dropdown-content">
+                    <a href="../team/gunnar.html">Gunner</a>
+                    <a href="../team/nic.html">Nic</a>
+                    <a href="../team/jessica.html">Jessica</a>
+                    <a href="../team/logan.html">Logan</a>
+                    <a href="../team/sarah.html">Sarah</a>
+                    <a href="../team/elias.html">Elias</a>
+                </div>	
+            </div>
+    
+            <div class="dropdown">
+                <button class="dropbtn">&#60;Project 1&#62;</button>
+                <div class="dropdown-content">
+                    <a href="../project-1/nested.html">Nested Attributes</a>
+                    <a href="../project-1/attributes.html">Favorite Attributes</a>
+                    <a href="../project-1/tags.html">Tags</a>
+                </div>
+            </div>	
+    
+            <div class="dropdown">
+                <button class="dropbtn">&#60;Project 2&#62;</button>
+                <div class="dropdown-content">
+                    <a href="../project-2/style.html">Styles</a>
+                </div>
+            </div>	
+    
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Dark mode button-->
+        <script>
+            var on = window.sessionStorage.getItem("Dark");
+            if(on%2 == 1 ){
+                var element = document.body;
+                element.classList.toggle("dark-mode")
+                if(on%2 == 0){
+                    document.getElementById("logo").src = "../Images/logo-dark.png"
+                } else {
+                    document.getElementById("logo").src = "../Images/logo-white.png"
+                }
+            }
+    
+            function toggleDarkMode() {
+                on++;
+                var element = document.body;
+                element.classList.toggle("dark-mode")
+                if(on%2 == 0){
+                    document.getElementById("logo").src = "../Images/logo-dark.png"
+                } else {
+                    document.getElementById("logo").src = "../Images/logo-white.png"
+                }
+                sessionStorage.setItem("Dark",on)
+                console.log(on);
+            }
+        </script>
+    
+    <div style="background-color: #ffe2d6;">
+        <h1>Jump to your favorite team member!</h1>
+            <ul>
+                <li><a href="#Gunner"><strong>Gunnar</strong></a></li>
+                <li><a href="#Elias" ><strong>Elias</strong></a></li>
+                <li><a href="#Sarah" ><strong>Sarah</strong></a></li>
+                <li><a href="#Jessica" ><strong>Jessica</strong></a></li>
+                <li><a href="#Nic" ><strong>Nic</strong></a></li>
+                <li><a href="#Logan" ><strong>Logan</strong></a></li>
+                <li><a href=https://gunnarstauning.github.io/g4/index.html><strong>Return to Main</strong></a></li>
+            </ul>
+    </div>
+
     <body>
         <div style="background-color: aqua;" id="Gunner">
             <h3>Gunnar's Tags</h3>
