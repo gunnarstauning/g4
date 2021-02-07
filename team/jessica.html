@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="..\text\css" href="..\style.css" media="screen"/>
-</head>
-<body>
-<ul>
-    <li><a class="navbar" href=..\index.html>&#60;home&#62;</a></li>
-    <li>
-        <div class="dropdown">
-        <button class="dropbtn">&#60;Our Team&#62;</button>
-        <div class="dropdown-content">
-            <a href=..\team\gunnar.html>gunnar.html</a>
-            <a href=..\team\nic.html>nic.html</a>
-            <a href=..\team\jessica.html>jessica.html</a>
-            <a href=..\team\logan.html>logan.html</a>
-            <a href=..\team\sarah.html>sarah.html</a>
-            <a href=..\team\elias.html>elias.html</a>
-        </div>
-      </div>
-        <div class="dropdown">
-        <button class="dropbtn">&#60;Project 1&#62;</button>
-        <div class="dropdown-content">
-            <a href=..\project-1\nested.html>nested.html</a>
-            <a href=..\project-1\attributes.html>attributes.html</a>
-            <a href=..\project-1\tags.html>tags.html</a>
-        </div>
-      </div>
-    </li>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../other/style.css"/> 
+	</head>
 
-</ul>
-</body>
-<br>
-<head>
-    <link rel="stylesheet" type="text/css" href="..\style.css">
-    </head>
+	<body>
+		
+		<img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo">
+
+		<div class="navbar" id="navbarBG">
+			<div class="dropdown">
+				<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
+			</div>
+
+			<div class="dropdown">
+				<button class="dropbtn">&#60;Our Team&#62;</button>
+				<div class="dropdown-content">
+					<a href="../team/gunnar.html">Gunner</a>
+					<a href="../team/nic.html">Nic</a>
+					<a href="../team/jessica.html">Jessica</a>
+					<a href="../team/logan.html">Logan</a>
+					<a href="../team/sarah.html">Sarah</a>
+					<a href="../team/elias.html">Elias</a>
+				</div>	
+			</div>
+
+			<div class="dropdown">
+				<button class="dropbtn">&#60;Project 1&#62;</button>
+				<div class="dropdown-content">
+					<a href="../project-1/nested.html">Nested Attributes</a>
+					<a href="../project-1/attributes.html">Favorite Attributes</a>
+					<a href="../project-1/tags.html">Tags</a>
+				</div>
+			</div>	
+
+			<div class="dropdown">
+				<button class="dropbtn">&#60;Project 2&#62;</button>
+				<div class="dropdown-content">
+					<a href="../project-2/style.html">Styles</a>
+				</div>
+			</div>	
+
+			<div class="dropdown">
+				<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+			</div>
+		</div>
+	</body>
+		<!-- Dark mode button-->
+		<script>
+			var on = window.sessionStorage.getItem("Dark");
+			if(on%2 == 1 ){
+				var element = document.body;
+				element.classList.toggle("dark-mode")
+				if(on%2 == 0){
+					document.getElementById("logo").src = "../Images/logo-dark.png"
+				} else {
+					document.getElementById("logo").src = "../Images/logo-white.png"
+				}
+			}
+
+			function toggleDarkMode() {
+				on++;
+				var element = document.body;
+				element.classList.toggle("dark-mode")
+				if(on%2 == 0){
+					document.getElementById("logo").src = "../Images/logo-dark.png"
+				} else {
+					document.getElementById("logo").src = "../Images/logo-white.png"
+				}
+				sessionStorage.setItem("Dark",on)
+				console.log(on);
+			}
+		</script>
+
 </html>
