@@ -2,6 +2,12 @@ body{
 	background-color: #96bbbb;
 	text-align: center;
 }
+
+.bodytest{
+	background-color: #96bbbb;
+	text-align: center;
+}
+
 ul {
 	list-style-type:none;
 	margin: 0;
