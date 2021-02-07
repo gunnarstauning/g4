@@ -3,6 +3,11 @@ body{
 	text-align: center;
 }
 
+.dark-mode {
+	background-color: #0E2222;
+	color: white;
+}
+
 .bodytest{
 	background-color: #96bbbb;
 	text-align: center;

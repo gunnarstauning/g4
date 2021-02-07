@@ -7,7 +7,7 @@
 
 	<body>
 		
-		<img src="../Images/logo-dark.png" padding="300px"; width="150px">
+		<img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo">
 
 		<div class="navbar" id="navbarBG">
 			<div class="dropdown">
@@ -41,7 +41,36 @@
 					<a href="../project-2/style.html">Styles</a>
 				</div>
 			</div>	
-		</div>
 
+			<div class="dropdown">
+				<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+			</div>
+		</div>
 	</body>
+		<!-- Dark mode button-->
+		<script>
+			var on = window.sessionStorage.getItem("Dark");
+			if(on%2 == 1 ){
+				var element = document.body;
+				element.classList.toggle("dark-mode")
+				if(on%2 == 0){
+					document.getElementById("logo").src = "../Images/logo-dark.png"
+				} else {
+					document.getElementById("logo").src = "../Images/logo-white.png"
+				}
+			}
+
+			function toggleDarkMode() {
+				on++;
+				var element = document.body;
+				element.classList.toggle("dark-mode")
+				if(on%2 == 0){
+					document.getElementById("logo").src = "../Images/logo-dark.png"
+				} else {
+					document.getElementById("logo").src = "../Images/logo-white.png"
+				}
+				sessionStorage.setItem("Dark",on)
+				console.log(on);
+			}
+		</script>
 </html>

@@ -1,17 +1,16 @@
 <html>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../other/style.css"/>
+	<head>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../other/style.css"/>
+	</head>
 
 	<style>
 		body {
 			color: #101010;
 			
 		}
-		.dark-mode {
-			background-color: #0E2222;
-			color: white;
-		}
+
 
 		#GunnarAttributes{
 			background-color:lightgrey;
@@ -49,7 +48,7 @@
 
 <body>
 		
-	<img src="../Images/logo-dark.png" padding="300px"; width="150px">
+	<img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo">
 
 	<div class="navbar" id="navbarBG">
 		<div class="dropdown">
@@ -83,16 +82,29 @@
 				<a href="../project-2/style.html">Styles</a>
 			</div>
 		</div>	
+
+		<div class="dropdown">
+			<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+		</div>	
+
+
 	</div>
 
 </body>
 <br>
 	<!-- Dark mode button-->
-	<button onclick="toggleDarkMode()">Dark mode</button>
 	<script>
+		var on = 0;
 		function toggleDarkMode() {
+			on++;
 			var element = document.body;
 			element.classList.toggle("dark-mode")
+			if(on%2 == 0){
+				document.getElementById("logo").src = "../Images/logo-dark.png"
+			} else {
+				document.getElementById("logo").src = "../Images/logo-white.png"
+			}
+			
 		}
 	</script>
 
