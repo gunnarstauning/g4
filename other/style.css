@@ -110,24 +110,26 @@ li a:hover {background-color: #e26b62;}
 .main-nav-link {
 
 }
-.eye-before{
+.eyes{
 background-color: white;
 border: black;
 border-radius: 50%;
 width: 50px;
 height: 50px;
-margin-left: auto;
-margin-right: auto; 
-padding: 10px;
+margin: auto;
 }
-.eye-after{
-	background-color: white;
-	border: black;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	margin-left: auto;
-	margin-right: auto; 
+.eyes::before{
+content: "";
+position: absolute;
+width: 50px;
+height: 50px;
+left: 50px;
+}
+.eyes::after{
+content: "";
+position: absolute;
+width: 50px;
+height: 50px;
 }
 
 /* Team pages relate */
