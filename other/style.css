@@ -52,7 +52,7 @@ li {
 }
 
 .dropbtn {
-	background-color: rgb(25, 68, 115);
+	background-color: rgb(25, 68, 115, 0);
 	color: white;
 	padding: 16px;
 	font-size: 20px;
