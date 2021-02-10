@@ -150,9 +150,63 @@ height: 50px;
     min-height: 200px;
     max-width: 500px;
     min-width: 100px;
-    background-color: rgb(177, 233, 177);
     border-radius:10px;
+	background-color: white;
+	position: relative;
+	width: 50%;
 }
+#elias.column{
+	background-image:url("../Figures/elias-figure.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+#gunnar.column{
+	background-image:url("../Figures/gunnarFigure.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+#jessica.column{
+	background-image:url("../Figures/hottiethottie.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+#logan.column{
+	background-image:url("../Figures/elias-figure.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+#nic.column{
+	background-image:url("../Figures/Nic-Figure.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+#sarah.column{
+	background-image:url("../Figures/sarah-stick.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .3s ease;
+	background-color: rgba(0,0,0,0.2);
+	border-radius:10px;
+	color:rgba(226, 107, 98, 1);
+	font-size:36px;
+	font-family: 'Hammersmith One', sans-serif;
+	text-align: center;
+  }
+  
+  .column:hover .overlay {
+	opacity: 1;
+  }
+  
 
 /* Team pages relate */
 
