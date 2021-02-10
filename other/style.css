@@ -171,7 +171,7 @@ height: 50px;
     background-repeat: no-repeat;
 }
 #logan.column{
-	background-image:url("../Figures/elias-figure.png");
+	background-image:url("../Figures/Logan-Figure.png");
 	background-size: contain;
     background-repeat: no-repeat;
 }
@@ -195,7 +195,7 @@ height: 50px;
 	width: 100%;
 	opacity: 0;
 	transition: .3s ease;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.4);
 	border-radius:10px;
 	color:rgba(226, 107, 98, 1);
 	font-size:36px;
@@ -252,4 +252,35 @@ height: 50px;
 	width: 80%;
 	height: 30px;
 	border-radius:10px;
+}
+
+/*Gradient Animator*/
+.css-selector {
+    background: linear-gradient(137deg, #0e2222, #194473, #618986, #96bbbb);
+    background-size: 800% 800%;
+
+    -webkit-animation: Dark-LightBlueGradient 7s ease infinite;
+    -moz-animation: Dark-LightBlueGradient 7s ease infinite;
+    -o-animation: Dark-LightBlueGradient 7s ease infinite;
+    animation: Dark-LightBlueGradient 7s ease infinite;
+}
+@-webkit-keyframes Dark-LightBlueGradient {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+@-moz-keyframes Dark-LightBlueGradient {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+@-o-keyframes Dark-LightBlueGradient {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+@keyframes Dark-LightBlueGradient {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
 }
