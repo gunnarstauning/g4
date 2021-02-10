@@ -139,7 +139,20 @@ height: 50px;
 
 }
 
-
+.row{
+	display:flex;
+}
+.column{
+	flex: 1;
+    padding:20px;
+    margin:20px;
+    max-height: 600px;
+    min-height: 200px;
+    max-width: 500px;
+    min-width: 100px;
+    background-color: rgb(177, 233, 177);
+    border-radius:10px;
+}
 
 /* Team pages relate */
 
