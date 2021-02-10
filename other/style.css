@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&display=swap');
 body{
-	background-color: #96bbbb;
 	text-align: center;
 }
 
-.dark-mode {
-	background-color: #0E2222;
-	color: white;
-}
 
 .bodytest{
 	background-color: #96bbbb;
@@ -255,31 +250,65 @@ height: 50px;
 }
 
 /*Gradient Animator*/
-.css-selector {
-    background: linear-gradient(137deg, #0e2222, #194473, #618986, #96bbbb);
-    background-size: 800% 800%;
+.dark-mode {
+    background: linear-gradient(137deg, #0e2222, #194473);
+    background-size: 400% 400%;
 
-    -webkit-animation: Dark-LightBlueGradient 7s ease infinite;
-    -moz-animation: Dark-LightBlueGradient 7s ease infinite;
-    -o-animation: Dark-LightBlueGradient 7s ease infinite;
-    animation: Dark-LightBlueGradient 7s ease infinite;
+    -webkit-animation: Dark-BlueGradient 2s ease infinite;
+    -moz-animation: Dark-BlueGradient 2s ease infinite;
+    -o-animation: Dark-BlueGradient 2s ease infinite;
+    animation: Dark-BlueGradient 2s ease infinite;
+
+	color: white;
 }
-@-webkit-keyframes Dark-LightBlueGradient {
+
+@-webkit-keyframes Dark-BlueGradient {
     0%{background-position:0% 41%}
     50%{background-position:100% 60%}
     100%{background-position:0% 41%}
 }
-@-moz-keyframes Dark-LightBlueGradient {
+@-moz-keyframes Dark-BlueGradient {
     0%{background-position:0% 41%}
     50%{background-position:100% 60%}
     100%{background-position:0% 41%}
 }
-@-o-keyframes Dark-LightBlueGradient {
+@-o-keyframes Dark-BlueGradient {
     0%{background-position:0% 41%}
     50%{background-position:100% 60%}
     100%{background-position:0% 41%}
 }
-@keyframes Dark-LightBlueGradient {
+@keyframes Dark-BlueGradient {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+
+body{
+    background: linear-gradient(137deg, #618986, #96bbbb);
+    background-size: 400% 400%;
+
+    -webkit-animation: Dark-BlueGradient 2s ease infinite;
+    -moz-animation: Dark-BlueGradient 2s ease infinite;
+    -o-animation: Dark-BlueGradient 2s ease infinite;
+    animation: Dark-BlueGradient 2s ease infinite;
+}
+
+@-webkit-keyframes Dark-BlueGradient {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+@-moz-keyframes Dark-BlueGradient {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+@-o-keyframes Dark-BlueGradient {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+@keyframes Dark-BlueGradient {
     0%{background-position:0% 41%}
     50%{background-position:100% 60%}
     100%{background-position:0% 41%}
