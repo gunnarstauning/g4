@@ -26,6 +26,8 @@ li {
 .navbar{
 	background-color: rgb(25, 68, 115);
 	color: white;
+	margin-left: 50px;
+	margin-right: 50px;
 	padding: 16px;
 	font-size: 16px;
 	border-radius: 50%;
@@ -110,6 +112,7 @@ li a:hover {background-color: #e26b62;}
 .main-nav-link {
 
 }
+
 .eyes{
 background-color: white;
 border: black;
@@ -131,6 +134,14 @@ position: absolute;
 width: 50px;
 height: 50px;
 }
+
+
+.stylehtml-link {
+	text-align: center;
+
+}
+
+
 
 /* Team pages relate */
 
