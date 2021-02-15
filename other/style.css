@@ -196,6 +196,7 @@ height: 50px;
 	font-size:36px;
 	font-family: 'Hammersmith One', sans-serif;
 	text-align: center;
+	text-shadow: 1.5px 1.5px #81332d;
   }
   
   .column:hover .overlay {
