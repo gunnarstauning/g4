@@ -27,7 +27,7 @@ li {
 	border-radius: 50%;
 	cursor: pointer;
 	text-decoration: none;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-family: 'Hammersmith One', sans-serif;
 
 }
 
@@ -43,7 +43,7 @@ li {
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-family: 'Hammersmith One', sans-serif;
 }
 
 .dropbtn {
@@ -55,6 +55,7 @@ li {
 	cursor: pointer;
 	text-decoration: underline;
 	border-radius: 50%;
+	font-family: 'Hammersmith One', sans-serif;
 }
 
 li a {
@@ -66,6 +67,7 @@ li a:hover {background-color: #e26b62;}
 .dropdown{
 	position:relative;
 	display: inline-block;
+	font-family: 'Hammersmith One', sans-serif;
 }
 
 .dropdown-content a {
@@ -211,13 +213,13 @@ height: 50px;
 	font-size: 50px;
 	padding-top: 10px;
 	margin: 50px;
-	color: #194473;
+	color: #225a96;
 }
 .content-slogan {
 	font-family: 'Hammersmith One', sans-serif;
 	font-size: 32px;
 	margin: 32px;
-	color: #194473;
+	color: #225a96;
 }
 .content-description {
 	font-size: 16px;
@@ -225,14 +227,14 @@ height: 50px;
 }
 
 /* Gunnar's Custom Styles */
-.gunnar-primary{
+div.gunnar-primary{
 	background: rgba(25, 68, 115, .7);
 	margin-left:auto;
 	margin-right:auto;
 	width: 80%;
 	border-radius:10px;
 }
-#gunnarHRID{
+hr#gunnarHRID{
 	display: block;
   	margin-top: 0.5em;
   	margin-bottom: 0.5em;
@@ -241,13 +243,11 @@ height: 50px;
   	border: 3px solid  rgb(25, 68, 115);
 	border-radius: 5px;
 }
-#gunnarID2{
-	background: rgba(226, 107, 98, .7);
+p#gunnarID{
 	margin-left:auto;
 	margin-right:auto;
-	width: 80%;
-	height: 30px;
 	border-radius:10px;
+	padding-top:5px;
 }
 
 /*Gradient Animator*/
