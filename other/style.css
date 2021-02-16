@@ -299,8 +299,11 @@ img#gunnarPic{
 	}
 img#imageChange{
 box-shadow: -10px 10px 20px rgb(29, 61, 95);
-
 }	
+#fontChange{
+	font-family:'Lucida Handwriting';
+	color:#000f89;
+}
 
 /*Gradient Animator*/
 .dark-mode {
