@@ -299,9 +299,12 @@ img#gunnarPic{
 	}
 img#imageChange{
 box-shadow: -10px 10px 20px rgb(29, 61, 95);
+border-radius: 45%;
+border: 10px solid rgb(211, 75, 139);
 }	
 #fontChange{
 	font-family:'Lucida Handwriting';
+	font-size: 50px;
 	color:#000f89;
 }
 
