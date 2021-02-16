@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&display=swap');
+
 body{
 	text-align: center;
 }
-
-
 .bodytest{
 	background-color: #96bbbb;
 	text-align: center;
@@ -18,6 +17,10 @@ ul {
 li {
 	float:left;
 }
+
+/*
+Everything navbar related \/
+*/
 .navbar{
 	background-color: rgb(25, 68, 115);
 	color: white;
@@ -30,12 +33,10 @@ li {
 	font-family: 'Hammersmith One', sans-serif;
 
 }
-
 #navbarBG{
 	display: block;
     margin: 20px 150px 20px 150px;
 }
-
 .dropdown-content {
 	display: none;
 	position: absolute;
@@ -62,7 +63,9 @@ li a {
 	display: inline-block;
 }
 
-li a:hover {background-color: #e26b62;}
+li a:hover {
+	background-color: #e26b62;
+}
 
 .dropdown{
 	position:relative;
@@ -88,6 +91,13 @@ li a:hover {background-color: #e26b62;}
 	margin-left: 70px;
 	margin-right: 70px;
 }
+#logo {
+	margin: 15px;
+	transition: 0.2s ease-in-out;
+}
+#logo:hover {
+	transform: scale(1.2);
+}
 .logo-header {
 	display: block;
     margin-left: auto;
@@ -108,6 +118,9 @@ li a:hover {background-color: #e26b62;}
 
 }
 
+/*
+Sarah's classes (I think) \/
+*/
 .eyes{
 background-color: white;
 border: black;
@@ -136,6 +149,9 @@ height: 50px;
 
 }
 
+/*
+Related to homepage team member cards \/
+*/
 .row{
 	display:flex;
 }
@@ -151,6 +167,7 @@ height: 50px;
 	background-color: white;
 	position: relative;
 	width: 50%;
+	box-shadow: 10px 10px #0000003f;
 }
 #elias.column{
 	background-image:url("../Figures/elias-figure.png");
@@ -192,7 +209,7 @@ height: 50px;
 	width: 100%;
 	opacity: 0;
 	transition: .3s ease;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.3);
 	border-radius:10px;
 	color:rgba(226, 107, 98, 1);
 	font-size:36px;
@@ -206,8 +223,7 @@ height: 50px;
   }
   
 
-/* Team pages relate */
-
+/* Team pages*/
 .content-nameplate {
 	font-family: 'Poppins', sans-serif;
 	font-size: 50px;
@@ -222,8 +238,51 @@ height: 50px;
 	color: #225a96;
 }
 .content-description {
-	font-size: 16px;
+	font-size: 20px;
 	font-family: 'Poppins', sans-serif;
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-bottom: 250px;
+}
+
+/* Elias's Custom Styles */
+#elias-self-portrait {
+	width: 15%;
+	margin: 50px;
+	box-shadow: 10px 10px #0000003f;
+	transform:rotate(-10deg);
+
+	animation: fadeIn 0.7s ease-in-out;
+}
+#elias-self-portrait:hover {
+	animation: shake 0.5s ease-in-out;
+}
+@keyframes fadeIn{
+    0% { 
+        transform:rotate(5deg); 
+        opacity: 0;
+    }
+    100% { 
+        transform:rotate(-10deg);  
+        opacity: 1;
+    }
+}
+@keyframes shake{
+    0% { 
+        transform:rotate(-10deg); 
+    }
+	25% {
+		transform:rotate(-4deg); 
+	}
+	50% {
+		transform:rotate(-10deg); 
+	}
+	75% {
+		transform:rotate(-4deg); 
+	}
+	100% {
+		transform:rotate(-10deg); 
+	}
 }
 
 /* Gunnar's Custom Styles */
@@ -295,10 +354,10 @@ img#gunnarPic{
     background: linear-gradient(137deg, #0e2222, #194473);
     background-size: 400% 400%;
 
-    -webkit-animation: Dark-BlueGradient 2s ease infinite;
-    -moz-animation: Dark-BlueGradient 2s ease infinite;
-    -o-animation: Dark-BlueGradient 2s ease infinite;
-    animation: Dark-BlueGradient 2s ease infinite;
+    -webkit-animation: Dark-BlueGradient 4s ease infinite;
+    -moz-animation: Dark-BlueGradient 4s ease infinite;
+    -o-animation: Dark-BlueGradient 4s ease infinite;
+    animation: Dark-BlueGradient 4s ease infinite;
 
 	color: white;
 }
@@ -328,10 +387,10 @@ body{
     background: linear-gradient(137deg, #618986, #96bbbb);
     background-size: 400% 400%;
 
-    -webkit-animation: Dark-BlueGradient 2s ease infinite;
-    -moz-animation: Dark-BlueGradient 2s ease infinite;
-    -o-animation: Dark-BlueGradient 2s ease infinite;
-    animation: Dark-BlueGradient 2s ease infinite;
+    -webkit-animation: Dark-BlueGradient 4s ease infinite;
+    -moz-animation: Dark-BlueGradient 4s ease infinite;
+    -o-animation: Dark-BlueGradient 4s ease infinite;
+    animation: Dark-BlueGradient 4s ease infinite;
 }
 
 @-webkit-keyframes Dark-BlueGradient {

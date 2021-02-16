@@ -5,89 +5,89 @@
 	</head>
 
 	<body>
-		
-		<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo"></a>
+		<div>
+			<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo"></a>
 
-		<div class="navbar" id="navbarBG">
-			<div class="dropdown">
-				<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
-			</div>
+			<div class="navbar" id="navbarBG">
+				<div class="dropdown">
+					<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
+				</div>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Our Team&#62;</button>
-				<div class="dropdown-content">
-					<a href="../team/gunnar.html">Gunnar</a>
-					<a href="../team/nic.html">Nic</a>
-					<a href="../team/jessica.html">Jessica</a>
-					<a href="../team/logan.html">Logan</a>
-					<a href="../team/sarah.html">Sarah</a>
-					<a href="../team/elias.html">Elias</a>
+				<div class="dropdown">
+					<button class="dropbtn">&#60;Our Team&#62;</button>
+					<div class="dropdown-content">
+						<a href="../team/gunnar.html">Gunnar</a>
+						<a href="../team/nic.html">Nic</a>
+						<a href="../team/jessica.html">Jessica</a>
+						<a href="../team/logan.html">Logan</a>
+						<a href="../team/sarah.html">Sarah</a>
+						<a href="../team/elias.html">Elias</a>
+					</div>	
+				</div>
+
+				<div class="dropdown">
+					<button class="dropbtn">&#60;Project 1&#62;</button>
+					<div class="dropdown-content">
+						<a href="../project-1/nested.html">Nested Attributes</a>
+						<a href="../project-1/attributes.html">Favorite Attributes</a>
+						<a href="../project-1/tags.html">Tags</a>
+					</div>
 				</div>	
+
+				<div class="dropdown">
+					<button class="dropbtn">&#60;Project 2&#62;</button>
+					<div class="dropdown-content">
+						<a href="../project-2/style.html">Styles</a>
+					</div>
+				</div>	
+
+				<div class="dropdown">
+					<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+				</div>
 			</div>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 1&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-1/nested.html">Nested Attributes</a>
-					<a href="../project-1/attributes.html">Favorite Attributes</a>
-					<a href="../project-1/tags.html">Tags</a>
-				</div>
-			</div>	
+			<!-- Dark mode button-->
+			<script>
+				var on = window.sessionStorage.getItem("Dark");
+				if(on%2 == 1 ){
+					var element = document.body;
+					element.classList.toggle("dark-mode")
+					if(on%2 == 0){
+						document.getElementById("logo").src = "../Images/logo-dark.png"
+					} else {
+						document.getElementById("logo").src = "../Images/logo-white.png"
+					}
+				}
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 2&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-2/style.html">Styles</a>
-				</div>
-			</div>	
+				function toggleDarkMode() {
+					on++;
+					var element = document.body;
+					element.classList.toggle("dark-mode")
+					if(on%2 == 0){
+						document.getElementById("logo").src = "../Images/logo-dark.png"
+					} else {
+						document.getElementById("logo").src = "../Images/logo-white.png"
+					}
+					sessionStorage.setItem("Dark",on)
+					console.log(on);
+				}
+			</script>
+		</div>
+		
 
-			<div class="dropdown">
-				<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+		<div class="content-nameplate" >Elias Willerup</div>
+		<div class='content-slogan' id="elias-scroller">Soon I won't be at teenager level anymore!</div>
+		<img id="elias-self-portrait" src="..\Figures\elias-figure.png" alt="Elias stick figure">
+		</div>
+			<div class="elias-primary">
+				<p class="content-description">
+					<strong>In 2001 I was thrown into this world with nothing but level 1 stats and two parents. Now, I'm almost level 20 and going strong!</strong> <br>
+					I have a computer, a guitar, many dollar bills, ten thousand donuts, and a girlfriend. Only one of those is a lie. <br>
+					My life-deck is full of past experiences. Some good, some bad. But many are there. I sometimes use my past knowledge to help me move forward in the future. After careful calculations, I decided to invest in my skills and acquire my own college education. I know, ambitions intentions. I hope that by the time I get to level 23 the grind will have been worth it.<br>
+				</p>
+						
 			</div>
 		</div>
-
-		<!-- Dark mode button-->
-		<script>
-			var on = window.sessionStorage.getItem("Dark");
-			if(on%2 == 1 ){
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-			}
-
-			function toggleDarkMode() {
-				on++;
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-				sessionStorage.setItem("Dark",on)
-				console.log(on);
-			}
-		</script>
-
-		
-
-		<div class="content-nameplate" style="text-align: center;">Elias Willerup</div>
-			<div style="background-color: white;">
-				<img src="..\Figures\elias-figure.png" alt="Elias stick figure">
-
-			</div>
-			<div class='content-slogan'>Soon I won't be a teenager anymore!</div>
-				<div class="elias-primary">
-					<p class="content-description" style="padding-top:5px;">
-						I'm from the moon. My bones were weak when I was born because the gravity there is low, but I got better through diet and exercise.
-					</p>
-						
-				</div>
-			</div>
 		</div>
 			
 
