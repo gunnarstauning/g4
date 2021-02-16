@@ -118,32 +118,6 @@ li a:hover {
 
 }
 
-/*
-Sarah's classes (I think) \/
-*/
-.eyes{
-background-color: white;
-border: black;
-border-radius: 50%;
-width: 50px;
-height: 50px;
-margin: auto;
-}
-.eyes::before{
-content: "";
-position: absolute;
-width: 50px;
-height: 50px;
-left: 50px;
-}
-.eyes::after{
-content: "";
-position: absolute;
-width: 50px;
-height: 50px;
-}
-
-
 .stylehtml-link {
 	text-align: center;
 
@@ -347,6 +321,47 @@ img#gunnarPic{
 		left:0px;
 		width: 20px;
 	}
+}
+
+.sarahAnimation{
+	background-color: white;
+	border: black;
+	border-width: thin;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	
+	animation-name: circle;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	}
+	@keyframes circle{
+		0%{
+			width: 50px;
+			height: 50px;
+			background-color: plum;
+		}
+		50%{
+			width: 100px;
+			height: 100px;
+			background-color: lightblue;
+		}
+		100%{
+			width: 50px;
+			height: 50px;
+			background-color: plum;
+		}
+	}
+img#imageChange{
+box-shadow: -10px 10px 20px rgb(29, 61, 95);
+border-radius: 45%;
+border: 10px solid rgb(211, 75, 139);
+}	
+#fontChange{
+	font-family:'Lucida Handwriting';
+	font-size: 50px;
+	color:#000f89;
 }
 
 /*Gradient Animator*/
