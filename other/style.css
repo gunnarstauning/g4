@@ -18,6 +18,16 @@ li {
 	float:left;
 }
 
+p {
+	color: white;
+	
+	padding: 8px;
+	font-size: 16px;
+	text-decoration: none;
+	font-family: 'Hammersmith One', sans-serif;
+
+}
+
 /*
 Everything navbar related \/
 */
@@ -122,6 +132,25 @@ li a:hover {
 	text-align: center;
 
 }
+
+
+/* Style.html */
+.circle {
+	background-color:#194473;
+	opacity: 0.2;
+	border-radius: 50%;
+	width: 45px;
+    height: 45px;
+    margin: 20px;
+	float: left;
+}
+.circle:hover {
+	opacity: 0.5;
+}
+.circles {
+	vertical-align: center;
+}
+
 
 /*
 Related to homepage team member cards \/
@@ -322,6 +351,7 @@ img#gunnarPic{
 		width: 20px;
 	}
 }
+/* End of Gunnar Styles */
 
 div.sarahAnimation{
 	background-color: white;
