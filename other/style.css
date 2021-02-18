@@ -381,13 +381,12 @@ img#jessicaimageborder{
 	border-radius: 100%;
 	border-color:midnightblue;
 	box-shadow: lightskyblue;
-	
+	animation: rotation 10s infinite linear;
 }
 p#whereamI{
 	font-family: 'Long Cang';
 	color:rgb(15, 14, 39);
 	font-size: xx-large;
-	
 	 
 
 }
@@ -396,6 +395,14 @@ hr#jessHR{
 	border-bottom:rgba(25, 68, 115, .7)
 
 }
+@keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+  }
 /*Gradient Animator*/
 .dark-mode {
     background: linear-gradient(137deg, #0e2222, #194473);
