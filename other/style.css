@@ -323,7 +323,7 @@ img#gunnarPic{
 	}
 }
 
-.sarahAnimation{
+div.sarahAnimation{
 	background-color: white;
 	border: black;
 	border-width: thin;
@@ -331,7 +331,6 @@ img#gunnarPic{
 	width: 50px;
 	height: 50px;
 	margin: auto;
-	top: auto;
 	
 	animation-name: circle;
 	animation-duration: 3s;
@@ -359,10 +358,20 @@ box-shadow: -10px 10px 20px rgb(29, 61, 95);
 border-radius: 45%;
 border: 10px solid rgb(211, 75, 139);
 }	
-#fontChange{
+div#fontChange{
 	font-family:'Lucida Handwriting';
 	font-size: 50px;
 	color:#000f89;
+}
+p#changyChange{
+	color:rgb(211, 75, 139);
+	font-family: monospace;
+	font-size: 25px;
+}
+ul#fixerUper{
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*Jessicas Jumble of stuffs*/
