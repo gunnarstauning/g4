@@ -387,7 +387,13 @@ p#whereamI{
 	font-family: 'Long Cang';
 	color:rgb(15, 14, 39);
 	font-size: xx-large;
+	
 	 
+
+}
+hr#jessHR{
+	border-top: 20px dotted white;
+	border-bottom:rgba(25, 68, 115, .7)
 
 }
 /*Gradient Animator*/
