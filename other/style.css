@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
 
 body{
 	text-align: center;
@@ -375,7 +376,20 @@ ul#fixerUper{
 }
 
 /*Jessicas Jumble of stuffs*/
+img#jessicaimageborder{
+	border: 20px solid;
+	border-radius: 100%;
+	border-color:midnightblue;
+	box-shadow: lightskyblue;
+	
+}
+p#whereamI{
+	font-family: 'Long Cang';
+	color:rgb(15, 14, 39);
+	font-size: xx-large;
+	 
 
+}
 /*Gradient Animator*/
 .dark-mode {
     background: linear-gradient(137deg, #0e2222, #194473);
