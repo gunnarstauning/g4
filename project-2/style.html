@@ -7,15 +7,19 @@
 		<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Poppins&display=swap" rel="stylesheet">
 
 		<style>
-			article#first{
+			article#ShortStory{
 				margin-left:auto;
 				margin-right:auto;
 				font-family: 'Poppins', sans-serif;
-				color:#d81159;
+				color:#194473;
 			}
 			div#content{
 				background-color:#96bbbb;
 				left:5px;
+				border-radius:5px;
+				padding-bottom:5px;
+				padding-left:5px;
+				padding-right:5px;
 			}
 		</style>
 	</head>
@@ -75,6 +79,13 @@
 
 		<hr>
 
+		<div id='content'>
+			<article  id='ShortStory'>
+				<h3 style='text-decoration: underline;'>A Short Story</h3>
+				<p style='font-family: Hammersmith One, sans-serif;'>This article title above is actually an h3 element that is styled with an internal style sheet and an inline style that is manipulating the font family, color, and text decoration; as well as some of the margins. This text that you are reading now is a very nice short story about how styling with style sheets and inline styles work to make content appear the way that they do. The internal style "ShortStory" is actaully controlling the font-family and color of both the title and this body of text, but if you look closely, they have different fonts. This text also has a separate font family, and since it is using inline styling as well, that takes priority. And all of this is wrapped in a div element that separates it from the background of the webpage, giving a nice emphasis with a couple style properties to make it nice.</p>
+			</article>
+		</div>
+		
 
 		
 	</body>
