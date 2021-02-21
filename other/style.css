@@ -497,7 +497,7 @@ img#loganborder {
 	border-radius: 10%;
 	border-color: black;
 	box-shadow: blanchedalmond;
-	border-style: groove;
+	border-style: dotted;
 }
 .container {
 	margin: 40px auto;
