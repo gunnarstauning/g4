@@ -487,6 +487,10 @@ body{
 {
 	font-family: monospace;
 }
+.container {
+	margin: 40px auto;
+	max-width: 600px;
+  }
 .arrow {
 	text-align: center;
 	margin: 30px 0;
