@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html>
+	<style>
+  #pfp {
+	border-radius: 33%;
+    animation-name: wiggle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes wiggle{
+    0% {
+		transform: rotate(15deg);
+    }
+    50% {
+		transform: rotate(-15deg);
+    }
+    100% {
+		transform: rotate(15deg);
+    }
+  }
+
+	</style>
 	<head>
 		<link rel="stylesheet" type="text/css" href="../other/style.css"/> 
 	</head>
@@ -76,7 +97,7 @@
     <body>
         <div class='content-nameplate'>Nic Barry</div>
             <hr>
-        <img src="..\Figures\Nic-Figure.png" alt="NicPic">
+        <img src="..\Figures\Nic-Figure.png" alt="NicPic" id="pfp">
             <hr>
         <div class='content-slogan'>
             Inhale the memes, Exhale the memes,<br>
