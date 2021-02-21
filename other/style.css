@@ -487,3 +487,23 @@ body{
 {
 	font-family: monospace;
 }
+.arrow {
+	text-align: center;
+	margin: 30px 0;
+  }
+  .arrow-anim {
+	color: #00FF00;
+	font-size: 50px;
+	animation: bounce 1s alternate infinite;
+  }
+  .arrow-anim:hover {
+	color: #fff;
+	text-decoration: none;
+  }
+  @keyframes bounce {
+	0%, 50% {
+	  transform: translateY(0px);
+	}
+	100% {
+	  transform: translateY(20px);
+	}
