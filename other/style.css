@@ -488,6 +488,11 @@ body{
 {
 	font-family: monospace;
 }
+.photo-animate
+{
+	animation: bounce 2s alternate infinite;
+}
+
 .container {
 	margin: 40px auto;
 	max-width: 600px;
