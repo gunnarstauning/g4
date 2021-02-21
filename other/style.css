@@ -492,6 +492,22 @@ body{
 {
 	animation: bounce 2s alternate infinite;
 }
+
+.logan-content {
+	margin-left: 250px;
+	margin-right: 250px;
+	margin-bottom: 300px;
+	font-family: monospace;
+}
+
+.loganID {
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:20px;
+	padding-top:10px;
+}
+
+
 img#loganborder {
 	border: 15px solid;
 	border-radius: 10%;
