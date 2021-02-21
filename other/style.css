@@ -494,8 +494,9 @@ body{
 }
 img#loganborder {
 	border: 30px solid;
-	border-radius: 100%;
+	border-radius: 50%;
 	border-color: black;
+	box-shadow: blanchedalmond;
 	border-style: groove;
 }
 .container {
