@@ -204,7 +204,82 @@ Related to homepage team member cards \/
   .column:hover .overlay {
 	opacity: 1;
   }
-  
+
+
+/* Style.html link on landing page */
+.arrow {
+	position: relative;
+	top: 10px;
+}
+.heart {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: -500px;
+	background-color: #225a96;
+	height: 70px;
+	width: 70px;
+	
+}
+.heart::after {
+	background-color: #225a96;
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	top: 0px;
+	left: 35px;
+}
+.heart::before {
+	background-color: #225a96;
+	border-radius: 50%;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	top: -35px;
+	left: 0px;
+}
+.arrow-shaft {
+	background-color: #225a96;
+	width: 500px;
+	height: 25px;
+	margin: auto;
+}
+.arrow-feathers1 {
+	background-color: #225a96;
+	width: 100px;
+	height: 25px;
+	position: relative;
+	left: 900px;
+}
+.arrow-feathers2 {
+	background-color: #225a96;
+	width: 100px;
+	height: 25px;
+	position: relative;
+	left: 1000px;
+}
+.stylepage-link-header {
+	position: relative;
+	margin: 100px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+}
+h2.arrowtext {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	color: #e26b62;
+	background-color: #225a96;
+	transform: skewX(-20deg);
+	margin: auto;
+	width: 300px;
+	height: 50px;
+}
+
+
 
 /* Team pages*/
 .content-nameplate {
