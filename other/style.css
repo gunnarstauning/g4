@@ -493,8 +493,8 @@ body{
 	animation: bounce 2s alternate infinite;
 }
 img#loganborder {
-	border: 30px solid;
-	border-radius: 50%;
+	border: 15px solid;
+	border-radius: 10%;
 	border-color: black;
 	box-shadow: blanchedalmond;
 	border-style: groove;
