@@ -481,3 +481,9 @@ body{
     50%{background-position:100% 60%}
     100%{background-position:0% 41%}
 }
+
+/*Logan's neat stuff*/
+.text-logan
+{
+	font-family: monospace;
+}
