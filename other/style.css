@@ -207,7 +207,7 @@ Related to homepage team member cards \/
 
 
 /* Style.html link on landing page */
-.arrow {
+.arrow-main {
 	position: relative;
 	top: 10px;
 }
@@ -565,7 +565,8 @@ body{
 }
 .photo-animate
 {
-	animation: bounce 2s alternate infinite;
+	animation: 2s alternate infinite;
+	animation-name: bounce;
 }
 
 .logan-content {
@@ -608,7 +609,8 @@ img#loganborder {
 	text-decoration: none;
   }
   @keyframes bounce {
-	0%, 50% {
+	0% {}
+	50% {
 	  transform: translateY(0px);
 	}
 	100% {
