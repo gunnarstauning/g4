@@ -1,23 +1,27 @@
 <DOCTYPE html>
-<html>
+    <html>
+
     <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
 
     <style>
-        body{
+        body {
             background-color: #96bbbb;
-        
+
         }
-        
-        #A{
+
+        #A {
             text-align: center;
         }
+
         .dark-mode {
             background-color: #0E2222;
             color: white;
         }
-        .navbar{
+
+        .navbar {
             background-color: rgb(25, 68, 115);
             color: white;
             padding: 16px;
@@ -25,25 +29,26 @@
             border-radius: 50%;
             cursor: pointer;
             text-decoration: none;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-        
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
         }
-        #navbarBG{
+
+        #navbarBG {
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: rgb(25, 68, 115);
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        
+
         .dropbtn {
             background-color: rgb(25, 68, 115);
             color: white;
@@ -51,109 +56,117 @@
             font-size: 16px;
             border: none;
             cursor: pointer;
-            text-decoration:underline;
+            text-decoration: underline;
             border-radius: 50%;
         }
-        .dropdown{
-            position:relative;
+
+        .dropdown {
+            position: relative;
             display: inline-block;
         }
-        
+
         .dropdown-content a {
             color: rgb(255, 255, 255);
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-        .dropdown-content a:hover {background-color: #e26b62}
-        .dropdown:hover .dropdown-content {
-            display:block;
-        }
-        .dropdown:hover .dropbtn {
-            background-color:  #e26b62;
-        }
-                </style>
 
-    <div id="A">
-        <a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo"></a>
-    
-        <div class="navbar" id="navbarBG">
-            <div class="dropdown">
-                <a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
-            </div>
-    
-            <div class="dropdown">
-                <button class="dropbtn">&#60;Our Team&#62;</button>
-                <div class="dropdown-content">
-                    <a href="../team/gunnar.html">Gunnar</a>
-                    <a href="../team/nic.html">Nic</a>
-                    <a href="../team/jessica.html">Jessica</a>
-                    <a href="../team/logan.html">Logan</a>
-                    <a href="../team/sarah.html">Sarah</a>
-                    <a href="../team/elias.html">Elias</a>
-                </div>	
-            </div>
-    
-            <div class="dropdown">
-                <button class="dropbtn">&#60;Project 1&#62;</button>
-                <div class="dropdown-content">
-                    <a href="../project-1/nested.html">Nested Attributes</a>
-                    <a href="../project-1/attributes.html">Favorite Attributes</a>
-                    <a href="../project-1/tags.html">Tags</a>
+        .dropdown-content a:hover {
+            background-color: #e26b62
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #e26b62;
+        }
+    </style>
+
+    <body>
+        <div id="A">
+            <a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" ; width="150px"
+                    id="logo"></a>
+
+            <div class="navbar" id="navbarBG">
+                <div class="dropdown">
+                    <a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
                 </div>
-            </div>	
-    
-            <div class="dropdown">
-                <button class="dropbtn">&#60;Project 2&#62;</button>
-                <div class="dropdown-content">
-                    <a href="../project-2/style.html">Styles</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">&#60;Our Team&#62;</button>
+                    <div class="dropdown-content">
+                        <a href="../team/gunnar.html">Gunnar</a>
+                        <a href="../team/nic.html">Nic</a>
+                        <a href="../team/jessica.html">Jessica</a>
+                        <a href="../team/logan.html">Logan</a>
+                        <a href="../team/sarah.html">Sarah</a>
+                        <a href="../team/elias.html">Elias</a>
+                    </div>
                 </div>
-            </div>	
-    
-            <div class="dropdown">
-                <button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+
+                <div class="dropdown">
+                    <button class="dropbtn">&#60;Project 1&#62;</button>
+                    <div class="dropdown-content">
+                        <a href="../project-1/nested.html">Nested Attributes</a>
+                        <a href="../project-1/attributes.html">Favorite Attributes</a>
+                        <a href="../project-1/tags.html">Tags</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">&#60;Project 2&#62;</button>
+                    <div class="dropdown-content">
+                        <a href="../project-2/style.html">Styles</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+                </div>
             </div>
         </div>
-    </div>
-    
-        <!-- Dark mode button-->
-        <script>
-            var on = window.sessionStorage.getItem("Dark");
-            if(on%2 == 1 ){
-                var element = document.body;
-                element.classList.toggle("dark-mode")
-                if(on%2 == 0){
-                    document.getElementById("logo").src = "../Images/logo-dark.png"
-                } else {
-                    document.getElementById("logo").src = "../Images/logo-white.png"
-                }
+    </body>
+    <!-- Dark mode button-->
+    <script>
+        var on = window.sessionStorage.getItem("Dark");
+        if (on % 2 == 1) {
+            var element = document.body;
+            element.classList.toggle("dark-mode")
+            if (on % 2 == 0) {
+                document.getElementById("logo").src = "../Images/logo-dark.png"
+            } else {
+                document.getElementById("logo").src = "../Images/logo-white.png"
             }
-    
-            function toggleDarkMode() {
-                on++;
-                var element = document.body;
-                element.classList.toggle("dark-mode")
-                if(on%2 == 0){
-                    document.getElementById("logo").src = "../Images/logo-dark.png"
-                } else {
-                    document.getElementById("logo").src = "../Images/logo-white.png"
-                }
-                sessionStorage.setItem("Dark",on)
-                console.log(on);
+        }
+
+        function toggleDarkMode() {
+            on++;
+            var element = document.body;
+            element.classList.toggle("dark-mode")
+            if (on % 2 == 0) {
+                document.getElementById("logo").src = "../Images/logo-dark.png"
+            } else {
+                document.getElementById("logo").src = "../Images/logo-white.png"
             }
-        </script>
-    
+            sessionStorage.setItem("Dark", on)
+            console.log(on);
+        }
+    </script>
+
     <div style="background-color: #ffe2d6;">
         <h1>Jump to your favorite team member!</h1>
-            <ul>
-                <li><a href="#Gunner"><strong>Gunnar</strong></a></li>
-                <li><a href="#Elias" ><strong>Elias</strong></a></li>
-                <li><a href="#Sarah" ><strong>Sarah</strong></a></li>
-                <li><a href="#Jessica" ><strong>Jessica</strong></a></li>
-                <li><a href="#Nic" ><strong>Nic</strong></a></li>
-                <li><a href="#Logan" ><strong>Logan</strong></a></li>
-                <li><a href=https://gunnarstauning.github.io/g4/index.html><strong>Return to Main</strong></a></li>
-            </ul>
+        <ul>
+            <li><a href="#Gunner"><strong>Gunnar</strong></a></li>
+            <li><a href="#Elias"><strong>Elias</strong></a></li>
+            <li><a href="#Sarah"><strong>Sarah</strong></a></li>
+            <li><a href="#Jessica"><strong>Jessica</strong></a></li>
+            <li><a href="#Nic"><strong>Nic</strong></a></li>
+            <li><a href="#Logan"><strong>Logan</strong></a></li>
+            <li><a href=https://gunnarstauning.github.io/g4/index.html><strong>Return to Main</strong></a></li>
+        </ul>
     </div>
 
     <body>
@@ -161,124 +174,162 @@
             <h3>Gunnar's Tags</h3>
             <a href=team/gunnar.html>Click Here to go to my Page</a>
             <p>
-                This is an extremely long paragraph of absolutely nothing. Pay close attention to what is said here. Professor Hampikian will have a HUGE quiz on it at the end of the semester. Trust me, the words, phrases, sentences here are totally not made up garbage to waste your time. I promise.
+                This is an extremely long paragraph of absolutely nothing. Pay close attention to what is said here.
+                Professor Hampikian will have a HUGE quiz on it at the end of the semester. Trust me, the words,
+                phrases, sentences here are totally not made up garbage to waste your time. I promise.
             </p>
-        </br>
+            </br>
             <strong>Here is my favorite list of things</strong>
             <ol>
                 <li>Number 1</li>
                 <li><small>Number 2</small></li>
                 <li><strong>Number 3</strong></li>
-			</ol>
-		</div>
-		<div style="background-color: rgb(255, 245, 198);" id="Elias">
-			<h1>Elias</h1>
-			<!-- <a href=team/elias.html>Check me out!</a> -->
-		</br>
+            </ol>
+        </div>
+        <div style="background-color: rgb(255, 245, 198);" id="Elias">
+            <h1>Elias</h1>
+            <!-- <a href=team/elias.html>Check me out!</a> -->
+            </br>
             <strong>These are my top 3 favorite songs:</strong>
             <ol>
-                <li><a href=https://open.spotify.com/track/1XrSjpNe49IiygZfzb74pk?si=3YdXXBczTyequVapPPXMcA target="_blank">What Once Was - Her's</a></li>
-                <li><a href=https://open.spotify.com/track/2g2iRWlBoOVvvW0a8pbhRK?si=Oh0uQgbLRN2uNqAdO_cTMQ target="_blank">Future People - Alabama Shakes</a></li>
-				<li><a href=https://open.spotify.com/track/46bkeaB7DA45q7PdKWLFkR?si=dYUSPWILRQe2F5asgkYuYg target="_blank">Amsterdam - Imagine Dragons</a></li>
-				
-				
+                <li><a href=https://open.spotify.com/track/1XrSjpNe49IiygZfzb74pk?si=3YdXXBczTyequVapPPXMcA
+                        target="_blank">What Once Was - Her's</a></li>
+                <li><a href=https://open.spotify.com/track/2g2iRWlBoOVvvW0a8pbhRK?si=Oh0uQgbLRN2uNqAdO_cTMQ
+                        target="_blank">Future People - Alabama Shakes</a></li>
+                <li><a href=https://open.spotify.com/track/46bkeaB7DA45q7PdKWLFkR?si=dYUSPWILRQe2F5asgkYuYg
+                        target="_blank">Amsterdam - Imagine Dragons</a></li>
+
+
             </ol>
         </div>
 
         <div style="background-color: greenyellow" id="Sarah">
             <h1> Sarah</h1>
             <a href=team/sarah.html>Here's mah page</a>
-        </br>
-        <i>Here's my favorite videos</i>
-        <ul>
-            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/6bdHBoG2bLY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-        </br>
-            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/MCilHPm4v5E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-        </br>
-            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/SLP9mbCuhJc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-        </ul>
-    </br>
-
-        <button>Here's a fun button!</button>
- 
-        </b>
-        <b>"But one thing's sure. Inspector Clay is dead, murdered, and somebody's responsible." - Plan 9 From Outer Space</b>
-        </div>
-
-        <div style="background-color:#171e31" id="Jessica" 
-        <a href="https://lh3.googleusercontent.com/b3tqEEVm_8vtlQCtzyxFoMNSR1DQ8yjnQjeBKNiaV1lK2-6v1xzZky-prPAmtrutgcLah2ylzOksLg4z8Ri-sGpPQUivowWeRJ3_1rPRSBB41rTY92QhN1LMkZ6DKRmN64tcDLcW=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/b3tqEEVm_8vtlQCtzyxFoMNSR1DQ8yjnQjeBKNiaV1lK2-6v1xzZky-prPAmtrutgcLah2ylzOksLg4z8Ri-sGpPQUivowWeRJ3_1rPRSBB41rTY92QhN1LMkZ6DKRmN64tcDLcW=w600-h315-p-k" height="150px" length="350px"/> </a>
-            <h1 style=color:white font-size="+2">Jessica</h1>
-    </br>
-            <a style=color:#7588bc href=team/jessica.html>Here I am!</a>
-        </br>
-        <strong style=color:white>Things that help me cope with GIMM:</strong>
-        </br>
-    <div>
-        <ul>
-            <li><iframe width="360" height="215" src="https://www.youtube.com/embed/_FYIfIVcpew" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
             </br>
-            <li><iframe width="360" height="215" src="https://www.youtube.com/embed/c1s3Iekns9k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-            </br>
-            <li><iframe width="360" height="215" src="https://www.youtube.com/embed/LtRVDHqUB1I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-        </ul>    
-        </div>
-        
-
-        <div style="background-color: rgb(0, 125, 186)" id="Nic">
-            <h1> Nic </h1>
-            <a href=team/nic.html> <h3>More About Me!</h3></a>
-            
-        </br>
-            <h2>Here is some stuff i like.</h2>
+            <i>Here's my favorite videos</i>
             <ul>
-                <li>
-                    <h4>Some Music</h4>
-                    <ol>
-                        <li>
-                            <iframe width="373" height="210" src="https://www.youtube.com/embed/mr1CM_yw68c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
-                        </li>
-
-                        <li>
-                            <iframe width="373" height="210" src="https://www.youtube.com/embed/NbOGHfjX0uE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
-                        </li>   
-                        
-                        <li>
-                            <iframe width="373" height="210" src="https://www.youtube.com/embed/8UVNT4wvIGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
-                        </li>
-                    </ol>
-                </li>
-
-                <li>
-                    <Strong>Some Games</Strong>
-                    <ol>
-                        <li>
-                            Genshin Impact <small><em><a href=https://genshin.mihoyo.com/ target="_blank">Play Me!</a></em></small>
-                        </li>
-
-                        <li>
-                            Minecraft <small><em><a href=https://www.minecraft.net/en-us/ target="_blank">Play Me!</a></em></small>
-                        </li>
-                    </ol>
-                </li>
+                <li><iframe width="560" height="315" src="https://www.youtube.com/embed/6bdHBoG2bLY" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+                </br>
+                <li><iframe width="560" height="315" src="https://www.youtube.com/embed/MCilHPm4v5E" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+                </br>
+                <li><iframe width="560" height="315" src="https://www.youtube.com/embed/SLP9mbCuhJc" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
             </ul>
+            </br>
+
+            <button>Here's a fun button!</button>
+
+            </b>
+            <b>"But one thing's sure. Inspector Clay is dead, murdered, and somebody's responsible." - Plan 9 From Outer
+                Space</b>
         </div>
 
+        <div style="background-color:#171e31" id="Jessica" <a
+            href="https://lh3.googleusercontent.com/b3tqEEVm_8vtlQCtzyxFoMNSR1DQ8yjnQjeBKNiaV1lK2-6v1xzZky-prPAmtrutgcLah2ylzOksLg4z8Ri-sGpPQUivowWeRJ3_1rPRSBB41rTY92QhN1LMkZ6DKRmN64tcDLcW=w2400?source=screenshot.guru">
+            <img src="https://lh3.googleusercontent.com/b3tqEEVm_8vtlQCtzyxFoMNSR1DQ8yjnQjeBKNiaV1lK2-6v1xzZky-prPAmtrutgcLah2ylzOksLg4z8Ri-sGpPQUivowWeRJ3_1rPRSBB41rTY92QhN1LMkZ6DKRmN64tcDLcW=w600-h315-p-k"
+                height="150px" length="350px" /> </a>
+            <h1 style=color:white font-size="+2">Jessica</h1>
+            </br>
+            <a style=color:#7588bc href=team/jessica.html>Here I am!</a>
+            </br>
+            <strong style=color:white>Things that help me cope with GIMM:</strong>
+            </br>
+            <div>
+                <ul>
+                    <li><iframe width="360" height="215" src="https://www.youtube.com/embed/_FYIfIVcpew" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></li>
+                    </br>
+                    <li><iframe width="360" height="215" src="https://www.youtube.com/embed/c1s3Iekns9k" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></li>
+                    </br>
+                    <li><iframe width="360" height="215" src="https://www.youtube.com/embed/LtRVDHqUB1I" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></li>
+                </ul>
+            </div>
 
-    </div>
-    <div>
-        <div style="background-color: rgb(175, 175, 175);" id="Logan">
-            <h1>Logan's Tags</h1>
-            <a href=team/logan.html>Logan's main page</a>
-        </br>
-        <strong>Here's a list of my top 3 photos</strong>
-        <ol>
-            <li><a href=https://c.tadst.com/gfx/600x337/moon-photography-camera.jpg?1 target="_blank">Two dudes vibing</a></li>
-            <li><a href=https://miro.medium.com/max/5120/1*nQh9lM6488mZ3ldWPUCMLQ.png target="_blank">cool sunset</a></li>
-            <li><a href=https://images.newscientist.com/wp-content/uploads/2019/04/08111018/screenshot-2019-04-08-10.24.34.jpg?width=300 target="_blank">Black hole</a></li>
-        </ol>
+
+            <div style="background-color: rgb(0, 125, 186)" id="Nic">
+                <h1> Nic </h1>
+                <a href=team/nic.html>
+                    <h3>More About Me!</h3>
+                </a>
+
+                </br>
+                <h2>Here is some stuff i like.</h2>
+                <ul>
+                    <li>
+                        <h4>Some Music</h4>
+                        <ol>
+                            <li>
+                                <iframe width="373" height="210" src="https://www.youtube.com/embed/mr1CM_yw68c"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </li>
+
+                            <li>
+                                <iframe width="373" height="210" src="https://www.youtube.com/embed/NbOGHfjX0uE"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </li>
+
+                            <li>
+                                <iframe width="373" height="210" src="https://www.youtube.com/embed/8UVNT4wvIGY"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        <Strong>Some Games</Strong>
+                        <ol>
+                            <li>
+                                Genshin Impact <small><em><a href=https://genshin.mihoyo.com/ target="_blank">Play
+                                            Me!</a></em></small>
+                            </li>
+
+                            <li>
+                                Minecraft <small><em><a href=https://www.minecraft.net/en-us/ target="_blank">Play
+                                            Me!</a></em></small>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
-    </div>
+        <div>
+            <div style="background-color: rgb(175, 175, 175);" id="Logan">
+                <h1>Logan's Tags</h1>
+                <a href=team/logan.html>Logan's main page</a>
+                </br>
+                <strong>Here's a list of my top 3 photos</strong>
+                <ol>
+                    <li><a href=https://c.tadst.com/gfx/600x337/moon-photography-camera.jpg?1 target="_blank">Two dudes
+                            vibing</a></li>
+                    <li><a href=https://miro.medium.com/max/5120/1*nQh9lM6488mZ3ldWPUCMLQ.png target="_blank">cool
+                            sunset</a></li>
+                    <li><a href=https://images.newscientist.com/wp-content/uploads/2019/04/08111018/screenshot-2019-04-08-10.24.34.jpg?width=300
+                            target="_blank">Black hole</a></li>
+                </ol>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     </body>
     <br>
-	<a href=https://gunnarstauning.github.io/g4/index.html><button>Back to the main page</button></a>
-</html> 
+    <a href=https://gunnarstauning.github.io/g4/index.html><button>Back to the main page</button></a>
+
+    </html>

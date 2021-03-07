@@ -1,124 +1,131 @@
 <!DOCTYPE html>
 <html>
-	<style>
-  #pfp {
-	border-radius: 33%;
-    animation-name: wiggle;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
+<style>
+	#pfp {
+		border-radius: 33%;
+		animation-name: wiggle;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
 
-  @keyframes wiggle{
-    0% {
-		transform: rotate(15deg);
-    }
-    50% {
-		transform: rotate(-15deg);
-    }
-    100% {
-		transform: rotate(15deg);
-    }
-  }
+	@keyframes wiggle {
+		0% {
+			transform: rotate(15deg);
+		}
 
-	</style>
-	<head>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="../other/style.css"/> 
-	</head>
+		50% {
+			transform: rotate(-15deg);
+		}
 
-	<body>
-		
-		<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo"></a>
+		100% {
+			transform: rotate(15deg);
+		}
+	}
+</style>
 
-		<div class="navbar" id="navbarBG">
-			<div class="dropdown">
-				<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
-			</div>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../other/style.css" />
+</head>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Our Team&#62;</button>
-				<div class="dropdown-content">
-					<a href="../team/gunnar.html">Gunnar</a>
-					<a href="../team/nic.html">Nic</a>
-					<a href="../team/jessica.html">Jessica</a>
-					<a href="../team/logan.html">Logan</a>
-					<a href="../team/sarah.html">Sarah</a>
-					<a href="../team/elias.html">Elias</a>
-				</div>	
-			</div>
+<body>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 1&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-1/nested.html">Nested Attributes</a>
-					<a href="../project-1/attributes.html">Favorite Attributes</a>
-					<a href="../project-1/tags.html">Tags</a>
-				</div>
-			</div>	
+	<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" ; width="150px" id="logo"></a>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 2&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-2/style.html">Styles</a>
-				</div>
-			</div>	
+	<div class="navbar" id="navbarBG">
+		<div class="dropdown">
+			<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
+		</div>
 
-			<div class="dropdown">
-				<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Our Team&#62;</button>
+			<div class="dropdown-content">
+				<a href="../team/gunnar.html">Gunnar</a>
+				<a href="../team/nic.html">Nic</a>
+				<a href="../team/jessica.html">Jessica</a>
+				<a href="../team/logan.html">Logan</a>
+				<a href="../team/sarah.html">Sarah</a>
+				<a href="../team/elias.html">Elias</a>
 			</div>
 		</div>
-	</body>
-		<!-- Dark mode button-->
-		<script>
-			var on = window.sessionStorage.getItem("Dark");
-			if(on%2 == 1 ){
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-			}
 
-			function toggleDarkMode() {
-				on++;
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-				sessionStorage.setItem("Dark",on)
-				console.log(on);
-			}
-		</script>
-
-    <body>
-        <div class='content-nameplate'>Nic Barry</div>
-            <hr>
-        <img src="..\Figures\Nic-Figure.png" alt="NicPic" id="pfp">
-            <hr>
-        <div class='content-slogan'>
-            Inhale the memes, Exhale the memes,<br>
-            Inject the memes into my bloodstream,<br>
-            There are good memes, and there are bad memes,<br>
-            why has god abandoned us?<hr>
-        </div>
-
-        <div>
-            <p class='content-description'>
-                Hello I am Nicolas Barry I am a Year 2 gimm student. I am brown hair. yuh ヘ（。□°）ヘ
-            </p>
-        </div>
-		<div>
-			<h1 class="content-description">These are some projects i made long ago in highschool</h1>
-			
-			<iframe width="432" height="757" style="border: 0px;" style="float: right" src="https://studio.code.org/projects/gamelab/nYoJFHjhGN2SxFYxiyoH2UBBBjGP6NK38dS6MU5ebXQ/embed"></iframe>
-			<iframe width="432" height="757" style="border: 0px;" style="float: right" src="https://studio.code.org/projects/gamelab/DGeqYMimZSeDE7hsl_Q-aSloWqauifTzCcszC3CzC1s/embed"></iframe>
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 1&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-1/nested.html">Nested Attributes</a>
+				<a href="../project-1/attributes.html">Favorite Attributes</a>
+				<a href="../project-1/tags.html">Tags</a>
+			</div>
 		</div>
-            
 
-    </body>
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 2&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-2/style.html">Styles</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+		</div>
+	</div>
+</body>
+<!-- Dark mode button-->
+<script>
+	var on = window.sessionStorage.getItem("Dark");
+	if (on % 2 == 1) {
+		var element = document.body;
+		element.classList.toggle("dark-mode")
+		if (on % 2 == 0) {
+			document.getElementById("logo").src = "../Images/logo-dark.png"
+		} else {
+			document.getElementById("logo").src = "../Images/logo-white.png"
+		}
+	}
+
+	function toggleDarkMode() {
+		on++;
+		var element = document.body;
+		element.classList.toggle("dark-mode")
+		if (on % 2 == 0) {
+			document.getElementById("logo").src = "../Images/logo-dark.png"
+		} else {
+			document.getElementById("logo").src = "../Images/logo-white.png"
+		}
+		sessionStorage.setItem("Dark", on)
+		console.log(on);
+	}
+</script>
+
+<body>
+	<div class='content-nameplate'>Nic Barry</div>
+	<hr>
+	<img src="..\Figures\Nic-Figure.png" alt="NicPic" id="pfp">
+	<hr>
+	<div class='content-slogan'>
+		Inhale the memes, Exhale the memes,<br>
+		Inject the memes into my bloodstream,<br>
+		There are good memes, and there are bad memes,<br>
+		why has god abandoned us?
+		<hr>
+	</div>
+
+	<div>
+		<p class='content-description'>
+			Hello I am Nicolas Barry I am a Year 2 gimm student. I am brown hair. yuh ヘ（。□°）ヘ
+		</p>
+	</div>
+	<div>
+		<h1 class="content-description">These are some projects i made long ago in highschool</h1>
+
+		<iframe width="432" height="757" style="border: 0px;" style="float: right"
+			src="https://studio.code.org/projects/gamelab/nYoJFHjhGN2SxFYxiyoH2UBBBjGP6NK38dS6MU5ebXQ/embed"></iframe>
+		<iframe width="432" height="757" style="border: 0px;" style="float: right"
+			src="https://studio.code.org/projects/gamelab/DGeqYMimZSeDE7hsl_Q-aSloWqauifTzCcszC3CzC1s/embed"></iframe>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+
 </html>

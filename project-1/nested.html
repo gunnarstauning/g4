@@ -1,260 +1,374 @@
 <DOCTYPE html>
-    <html>
-		<head>
-			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-		</head>
-		
-		<style>
-body{
-	background-color: #96bbbb;
+	<html>
 
-}
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	</head>
 
-#A{
-	text-align: center;
-}
-.dark-mode {
-	background-color: #0E2222;
-	color: white;
-}
-.navbar{
-	background-color: rgb(25, 68, 115);
-	color: white;
-	padding: 16px;
-	font-size: 16px;
-	border-radius: 50%;
-	cursor: pointer;
-	text-decoration: none;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	<style>
+		body {
+			background-color: #96bbbb;
 
-}
-#navbarBG{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+		}
 
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: rgb(25, 68, 115);
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
+		#A {
+			text-align: center;
+		}
 
-.dropbtn {
-	background-color: rgb(25, 68, 115);
-	color: white;
-	padding: 16px;
-	font-size: 16px;
-	border: none;
-	cursor: pointer;
-	text-decoration:underline;
-	border-radius: 50%;
-}
-.dropdown{
-	position:relative;
-	display: inline-block;
-}
+		.dark-mode {
+			background-color: #0E2222;
+			color: white;
+		}
 
-.dropdown-content a {
-	color: rgb(255, 255, 255);
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-.dropdown-content a:hover {background-color: #e26b62}
-.dropdown:hover .dropdown-content {
-	display:block;
-}
-.dropdown:hover .dropbtn {
-	background-color:  #e26b62;
-}
-		</style>
+		.navbar {
+			background-color: rgb(25, 68, 115);
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border-radius: 50%;
+			cursor: pointer;
+			text-decoration: none;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-	<div id="A">
-		<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo"></a>
+		}
 
-		<div class="navbar" id="navbarBG">
-			<div class="dropdown">
-				<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
-			</div>
+		#navbarBG {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Our Team&#62;</button>
-				<div class="dropdown-content">
-					<a href="../team/gunnar.html">Gunnar</a>
-					<a href="../team/nic.html">Nic</a>
-					<a href="../team/jessica.html">Jessica</a>
-					<a href="../team/logan.html">Logan</a>
-					<a href="../team/sarah.html">Sarah</a>
-					<a href="../team/elias.html">Elias</a>
-				</div>	
-			</div>
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: rgb(25, 68, 115);
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 1&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-1/nested.html">Nested Attributes</a>
-					<a href="../project-1/attributes.html">Favorite Attributes</a>
-					<a href="../project-1/tags.html">Tags</a>
+		.dropbtn {
+			background-color: rgb(25, 68, 115);
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			text-decoration: underline;
+			border-radius: 50%;
+		}
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content a {
+			color: rgb(255, 255, 255);
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #e26b62
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown:hover .dropbtn {
+			background-color: #e26b62;
+		}
+	</style>
+
+	<body>
+		<div id="A">
+			<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" ; width="150px"
+					id="logo"></a>
+
+			<div class="navbar" id="navbarBG">
+				<div class="dropdown">
+					<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
 				</div>
-			</div>	
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 2&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-2/style.html">Styles</a>
+				<div class="dropdown">
+					<button class="dropbtn">&#60;Our Team&#62;</button>
+					<div class="dropdown-content">
+						<a href="../team/gunnar.html">Gunnar</a>
+						<a href="../team/nic.html">Nic</a>
+						<a href="../team/jessica.html">Jessica</a>
+						<a href="../team/logan.html">Logan</a>
+						<a href="../team/sarah.html">Sarah</a>
+						<a href="../team/elias.html">Elias</a>
+					</div>
 				</div>
-			</div>	
 
-			<div class="dropdown">
-				<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+				<div class="dropdown">
+					<button class="dropbtn">&#60;Project 1&#62;</button>
+					<div class="dropdown-content">
+						<a href="../project-1/nested.html">Nested Attributes</a>
+						<a href="../project-1/attributes.html">Favorite Attributes</a>
+						<a href="../project-1/tags.html">Tags</a>
+					</div>
+				</div>
+
+				<div class="dropdown">
+					<button class="dropbtn">&#60;Project 2&#62;</button>
+					<div class="dropdown-content">
+						<a href="../project-2/style.html">Styles</a>
+					</div>
+				</div>
+
+				<div class="dropdown">
+					<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+				</div>
 			</div>
 		</div>
-	</div>
-
-		<!-- Dark mode button-->
-		<script>
-			var on = window.sessionStorage.getItem("Dark");
-			if(on%2 == 1 ){
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
+	</body>
+	<!-- Dark mode button-->
+	<script>
+		var on = window.sessionStorage.getItem("Dark");
+		if (on % 2 == 1) {
+			var element = document.body;
+			element.classList.toggle("dark-mode")
+			if (on % 2 == 0) {
+				document.getElementById("logo").src = "../Images/logo-dark.png"
+			} else {
+				document.getElementById("logo").src = "../Images/logo-white.png"
 			}
+		}
 
-			function toggleDarkMode() {
-				on++;
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-				sessionStorage.setItem("Dark",on)
-				console.log(on);
+		function toggleDarkMode() {
+			on++;
+			var element = document.body;
+			element.classList.toggle("dark-mode")
+			if (on % 2 == 0) {
+				document.getElementById("logo").src = "../Images/logo-dark.png"
+			} else {
+				document.getElementById("logo").src = "../Images/logo-white.png"
 			}
-		</script>
+			sessionStorage.setItem("Dark", on)
+			console.log(on);
+		}
+	</script>
 
 
-        <body>
-    				<div style="background-color: #ffe2d6;">
-					<h1>Jump to your favorite team member!</h1>
-						<ul>
-							<li><a href="#Gunner"><strong>Gunnar</strong></a></li>
-							<li><a href="#Elias" ><strong>Elias</strong></a></li>
-							<li><a href="#Sarah" ><strong>Sarah</strong></a></li>
-							<li><a href="#Jessica" ><strong>Jessica</strong></a></li>
-							<li><a href="#Nic" ><strong>Nic</strong></a></li>
-							<li><a href="#Logan" ><strong>Logan</strong></a></li>
-							<li><a href=https://gunnarstauning.github.io/g4/index.html><strong>Return to Main</strong></a></li>
-						</ul>
-					</div>
-						
-	        <div style="background-color: chartreuse;" id="Gunner">
-                <h1>Gunnar's Nested Attributes </h1>
-                <div><p><ul><li><a href="https://www.google.com/webhp?source=search_app">Google is a lit website</a></li></ul></p></div>
-                <div><p><h3><em>This is emphasized text,<mark> but this text is also highlighted.</mark></em></h3></p></div>
-                <p><h6><ol><li><a href=""><strong>BIG BEEFY LINK IN A LIST</strong></a></li></ol></h6></p>
-                <div><h4><pre><b><q>This is a genius quote.</q></b></pre></h4></div>
-			</div>
-			
-            <div style="background-color: #792828" id="Elias">
-				<h3 style="color:antiquewhite" >Elias's Nested Attributes</h3>
-				<p><h1 style="color:rgb(255, 216, 87)">Let's play...<br> Rick-Roll-Roulette</h1></p>
-				<p style="color:#7588bc"><i>You get six buttons...</i> each leads to a regular popular music video; except <b>ONE</b>.
-					<br>Choose wisely, or risk getting rick-rolled once again.</p>
+	<body>
+		<div style="background-color: #ffe2d6;">
+			<h1>Jump to your favorite team member!</h1>
+			<ul>
+				<li><a href="#Gunner"><strong>Gunnar</strong></a></li>
+				<li><a href="#Elias"><strong>Elias</strong></a></li>
+				<li><a href="#Sarah"><strong>Sarah</strong></a></li>
+				<li><a href="#Jessica"><strong>Jessica</strong></a></li>
+				<li><a href="#Nic"><strong>Nic</strong></a></li>
+				<li><a href="#Logan"><strong>Logan</strong></a></li>
+				<li><a href=https://gunnarstauning.github.io/g4/index.html><strong>Return to Main</strong></a></li>
+			</ul>
+		</div>
+
+		<div style="background-color: chartreuse;" id="Gunner">
+			<h1>Gunnar's Nested Attributes </h1>
+			<div>
+				<p>
 				<ul>
-					<li><form action="https://youtu.be/qORYO0atB6g" method="get" target="_blank">
+					<li><a href="https://www.google.com/webhp?source=search_app">Google is a lit website</a></li>
+				</ul>
+				</p>
+			</div>
+			<div>
+				<p>
+				<h3><em>This is emphasized text,<mark> but this text is also highlighted.</mark></em></h3>
+				</p>
+			</div>
+			<p>
+			<h6>
+				<ol>
+					<li><a href=""><strong>BIG BEEFY LINK IN A LIST</strong></a></li>
+				</ol>
+			</h6>
+			</p>
+			<div>
+				<h4>
+					<pre><b><q>This is a genius quote.</q></b></pre>
+				</h4>
+			</div>
+		</div>
+
+		<div style="background-color: #792828" id="Elias">
+			<h3 style="color:antiquewhite">Elias's Nested Attributes</h3>
+			<p>
+			<h1 style="color:rgb(255, 216, 87)">Let's play...<br> Rick-Roll-Roulette</h1>
+			</p>
+			<p style="color:#7588bc"><i>You get six buttons...</i> each leads to a regular popular music video; except
+				<b>ONE</b>.
+				<br>Choose wisely, or risk getting rick-rolled once again.
+			</p>
+			<ul>
+				<li>
+					<form action="https://youtu.be/qORYO0atB6g" method="get" target="_blank">
 						<button type="submit">Option 1</button>
-					</form></li>
-					<li><form action="https://youtu.be/KN8nJFLu1Rk" method="get" target="_blank">
+					</form>
+				</li>
+				<li>
+					<form action="https://youtu.be/KN8nJFLu1Rk" method="get" target="_blank">
 						<button type="submit">Option 2</button>
-					</form></li>
-					<!-- It's this one. \/-->
-					<li><form action="https://youtu.be/dQw4w9WgXcQ" method="get" target="_blank">
+					</form>
+				</li>
+				<!-- It's this one. \/-->
+				<li>
+					<form action="https://youtu.be/dQw4w9WgXcQ" method="get" target="_blank">
 						<button type="submit">Option 3</button>
-					</form></li>
-					<li><form action="https://youtu.be/1uYWYWPc9HU" method="get" target="_blank">
+					</form>
+				</li>
+				<li>
+					<form action="https://youtu.be/1uYWYWPc9HU" method="get" target="_blank">
 						<button type="submit">Option 4</button>
-					</form></li>
-					<li><form action="https://youtu.be/AbV-Q6tz4B8" method="get" target="_blank">
+					</form>
+				</li>
+				<li>
+					<form action="https://youtu.be/AbV-Q6tz4B8" method="get" target="_blank">
 						<button type="submit">Option 5</button>
-					</form></li>
-					<li><form action="https://youtu.be/tsJXoqvmgzM" method="get" target="_blank">
+					</form>
+				</li>
+				<li>
+					<form action="https://youtu.be/tsJXoqvmgzM" method="get" target="_blank">
 						<button type="submit">Option 6</button>
-					</form></li>
+					</form>
+				</li>
+			</ul>
+		</div>
+
+
+
+		<div style="background-color:#171e31" id="Jessica">
+			<h1 style="color:white">Jessica's Nested Attributes</h1>
+			<div style="color:white">
+				<h2>
+					<ul>
+						<li><a style="color:white" href=https://www.youtube.com/watch?v=Z7Rj9mHj79E>Click me :)</a>
+						</li>
+					</ul>
+				</h2>
+			</div>
+			<h3 style="color:white">
+				<ol>
+					<li><b style="color:white"><button style="color:#7588bc">Big Ol Button</button></b></li>
+				</ol>
+			</h3>
+			<h4 style="color:white">
+				<ul><i>
+						<li><a style="color:#7588bc" href="https://www.youtube.com/watch?v=Gbj7d6A8MyU"> Seals are the
+								superior animal prove me wrong (Don't bother, save your lies.) </a></li>
+					</i></ul>
+			</h4>
+			<div>
+				<ul style="color:white">
+					<li><q><strong style="color:white">Tired of this, grandpa.</strong></q></li>
 				</ul>
 			</div>
+		</div>
 
-			
-			
-            <div style="background-color:#171e31" id="Jessica">
-                <h1 style="color:white">Jessica's Nested Attributes</h1>
-                <div style="color:white"><h2><ul><li><a style="color:white" href=https://www.youtube.com/watch?v=Z7Rj9mHj79E>Click me :)</a> </li></ul></h2></div>
-                <h3 style="color:white"><ol><li><b style="color:white"><button style="color:#7588bc">Big Ol Button</button></b></li></ol></h3>
-                <h4 style="color:white"><ul><i><li><a style="color:#7588bc" href="https://www.youtube.com/watch?v=Gbj7d6A8MyU"> Seals are the superior animal prove me wrong (Don't bother, save your lies.) </a></li></i></ul></h4>
-                <div><ul style="color:white"><li><q><strong style="color:white">Tired of this, grandpa.</strong></q></li></ul></div>
-			</div>
-			
-			<div style="background-color: rgb(0, 125, 186)" id="Nic">
-				<h1>Nic's Nested Attributes</h1>
-				
+		<div style="background-color: rgb(0, 125, 186)" id="Nic">
+			<h1>Nic's Nested Attributes</h1>
+
+			<ul>
+				<li>
+					<ol>
+						<li>
+							<i title="I'M">
+								<h1 style="color:red;">NaNANANANANAn BATMANAAAN</h1>
+							</i>
+						</li>
+
+						<li>
+							<small title="A" style="color: orange;">PAPAPAPAPA</small> <small style="font-size:200;"
+								style="color: orange;">POW</small>
+						</li>
+					</ol>
+				</li>
+
+				<li>
+					<ol>
+						<li>
+							<sup title="HIDDEN"><em><a href="https://www.youtube.com/watch?v=vtiqvsutWf0"
+										target="_blank" style="color: green;">kakakaka kachi daze</a></em></sup>
+						</li>
+
+						<li>
+							<sup title="MESSAGE">
+								<h5><a href="https://www.youtube.com/watch?v=R03cqGg40GU" target="_blank"
+										style="color: blue;">DEAAAAATHH of a bachelor</a></h5>
+							</sup>
+						</li>
+
+						<li>
+							<b title="OwO"><a href="https://www.youtube.com/watch?v=Soa3gO7tL-c" target="_blank"
+									style="color: violet;">I walk a lonely road</a></b>
+						</li>
+					</ol>
+				</li>
+			</ul>
+
+		</div>
+
+		<div id="Sarah">
+			<h1>Sarah's Nested Attributes</h1>
+			<h2>Nintendo Consoles <br> <small>NES <br> <strong>SNES <br> <i>N64 <br> <em>Gamecube
+							</em></i></strong></small></h2>
+			<h3>
 				<ul>
-					<li>
-						<ol>
-							<li>
-								<i title="I'M"><h1 style="color:red;">NaNANANANANAn BATMANAAAN</h1></i>
-							</li>
-
-							<li>
-								<small title="A" style="color: orange;">PAPAPAPAPA</small> <small style="font-size:200;" style="color: orange;">POW</small>
-							</li>
-						</ol>
-					</li>
-
-					<li>
-						<ol>
-							<li>
-								<sup title="HIDDEN"><em><a href="https://www.youtube.com/watch?v=vtiqvsutWf0" target="_blank" style="color: green;">kakakaka kachi daze</a></em></sup>
-							</li>
-
-							<li>
-								<sup title="MESSAGE"><h5><a href="https://www.youtube.com/watch?v=R03cqGg40GU" target="_blank" style="color: blue;">DEAAAAATHH of a bachelor</a></h5></sup>
-							</li>
-
-							<li>
-								<b title="OwO"><a href="https://www.youtube.com/watch?v=Soa3gO7tL-c" target="_blank" style="color: violet;">I walk a lonely road</a></b>
-							</li>
-						</ol>
-					</li>
+					<li><b><label>Fancy Text~</label></b></li>
 				</ul>
+			</h3>
+			<div>
+				<h4><i>
+						<p>Check it<a
+								href="https://cdn.vox-cdn.com/thumbor/cV8X8BZ-aGs8pv3D-sCMr5fQZyI=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19933026/image.png">
+								Out</a></p>
+					</i></h4>
+			</div>
+			<h5>
+				<ol>
+					<li>I wonder <sub>what's for <strong>DINNER</strong></sub></li>
+				</ol>
+			</h5>
+		</div>
 
+		<div style="background-color: deepskyblue;">
+			<h1>Logan's Nested Attributes</h1>
+			<div>
+				<p>
+				<ul>
+					<li><a href="https://youtube.com">Youtube is mint</a></li>
+				</ul>
+				</p>
 			</div>
-			
-            <div id="Sarah">
-                <h1>Sarah's Nested Attributes</h1>
-                <h2>Nintendo Consoles <br> <small>NES <br> <strong>SNES <br> <i>N64 <br> <em>Gamecube </em></i></strong></small></h2>
-                <h3><ul><li><b><label>Fancy Text~</label></b></li></ul></h3>
-                <div><h4><i><p>Check it<a href="https://cdn.vox-cdn.com/thumbor/cV8X8BZ-aGs8pv3D-sCMr5fQZyI=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19933026/image.png"> Out</a></p></i></h4></div>
-                <h5><ol><li>I wonder <sub>what's for <strong>DINNER</strong></sub></li></ol></h5>
+			<div>
+				<p>
+				<h2><em>Here's some text<small>now it's smaller</small></em></h2>
+				</p>
 			</div>
-			
-            <div style="background-color: deepskyblue;">
-				<h1>Logan's Nested Attributes</h1>
-				<div><p><ul><li><a href="https://youtube.com">Youtube is mint</a></li></ul></p></div>
-				<div><p><h2><em>Here's some text<small>now it's smaller</small></em></h2></p></div>
-				<h3 style="color: gold;"><ol><li><b style="color:honeydew"><button style="color: hotpink">Cool Button</button></b></li></ol></h3>
-				<div><h4><p><b><strong>Has anyone seen my Dad?</strong></b></p></h4></div>
-			</div>	
-        </body>
-        <br>
-        <a href=https://gunnarstauning.github.io/g4/index.html><button>Back to the main page</button></a>
-    </html>
+			<h3 style="color: gold;">
+				<ol>
+					<li><b style="color:honeydew"><button style="color: hotpink">Cool Button</button></b></li>
+				</ol>
+			</h3>
+			<div>
+				<h4>
+					<p><b><strong>Has anyone seen my Dad?</strong></b></p>
+				</h4>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+			crossorigin="anonymous"></script>
+	</body>
+	<br>
+	<a href=https://gunnarstauning.github.io/g4/index.html><button>Back to the main page</button></a>
+
+	</html>

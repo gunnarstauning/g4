@@ -1,145 +1,153 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-	</head>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-	<div id='paper-background'></div>
+<div id='paper-background'></div>
 
-	<body class='css-selector'>
-		
-		<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" width="150px" id="logo"></a>
+<body class='css-selector'>
 
-		<div class="navbar" id="navbarBG">
-			<div class="dropdown">
-				<a class="dropbtn" href="index.html">&#60;Home&#62;</a>
-			</div>
+	<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" width="150px" id="logo"></a>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Our Team&#62;</button>
-				<div class="dropdown-content">
-					<a href="../team/gunnar.html">Gunnar</a>
-					<a href="../team/nic.html">Nic</a>
-					<a href="../team/jessica.html">Jessica</a>
-					<a href="../team/logan.html">Logan</a>
-					<a href="../team/sarah.html">Sarah</a>
-					<a href="../team/elias.html">Elias</a>
-				</div>	
-			</div>
-
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 1&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-1/nested.html">Nested Attributes</a>
-					<a href="../project-1/attributes.html">Favorite Attributes</a>
-					<a href="../project-1/tags.html">Tags</a>
-				</div>
-			</div>	
-
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 2&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-2/style.html">Styles</a>
-				</div>
-			</div>
-			
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 3&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-3/cards.html">Cards</a>
-				</div>
-			</div>	
-
-			<div class="dropdown">
-				<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
-			</div>
-
+	<div class="navbar" id="navbarBG">
+		<div class="dropdown">
+			<a class="dropbtn" href="index.html">&#60;Home&#62;</a>
 		</div>
-	</body>
 
-	
-		<!-- Dark mode button-->
-		<script>
-			var on = 0;
-			on = window.sessionStorage.getItem("Dark");
-			if(on%2 == 1 ){
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-			}			
-			function toggleDarkMode() {
-				on++;
-				var element = document.body;
-				element.classList.toggle("dark-mode");
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-				window.sessionStorage.setItem("Dark",on);
-				console.log(on);
-				console.log(sessionStorage.getItem("Dark"))
-			}
-		</script>
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Our Team&#62;</button>
+			<div class="dropdown-content">
+				<a href="../team/gunnar.html">Gunnar</a>
+				<a href="../team/nic.html">Nic</a>
+				<a href="../team/jessica.html">Jessica</a>
+				<a href="../team/logan.html">Logan</a>
+				<a href="../team/sarah.html">Sarah</a>
+				<a href="../team/elias.html">Elias</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 1&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-1/nested.html">Nested Attributes</a>
+				<a href="../project-1/attributes.html">Favorite Attributes</a>
+				<a href="../project-1/tags.html">Tags</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 2&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-2/style.html">Styles</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 3&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-3/cards.html">Cards</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+		</div>
+
+	</div>
+</body>
+
+
+<!-- Dark mode button-->
+<script>
+	var on = 0;
+	on = window.sessionStorage.getItem("Dark");
+	if (on % 2 == 1) {
+		var element = document.body;
+		element.classList.toggle("dark-mode")
+		if (on % 2 == 0) {
+			document.getElementById("logo").src = "../Images/logo-dark.png"
+		} else {
+			document.getElementById("logo").src = "../Images/logo-white.png"
+		}
+	}
+	function toggleDarkMode() {
+		on++;
+		var element = document.body;
+		element.classList.toggle("dark-mode");
+		if (on % 2 == 0) {
+			document.getElementById("logo").src = "../Images/logo-dark.png"
+		} else {
+			document.getElementById("logo").src = "../Images/logo-white.png"
+		}
+		window.sessionStorage.setItem("Dark", on);
+		console.log(on);
+		console.log(sessionStorage.getItem("Dark"))
+	}
+</script>
 <br>
-		<body>
-			<!--<div id='stylehtml-link'>
+
+<body>
+	<!--<div id='stylehtml-link'>
 				<h4>The moment you've been waiting for.</h4>
 				<h3><a href="../project-2/style.html">Style.html</h3>
 			</div>
-		-->	
-		
-			<div class='row'>
-				<div class='column' id='elias'>
-					<a href='../team/elias.html'>
-						<div class='overlay'><br><br>Elias</div>
-					</a>
-				</div>
-				<div class='column' id='gunnar'>
-					<a href='../team/gunnar.html'>
-						<div class='overlay'><br><br>Gunnar</div>
-					</a>
-				</div>
-				<div class='column' id='jessica'>
-					<a href='../team/jessica.html'>
-						<div class='overlay'><br><br>Jessica</div>
-					</a>
-				</div>
-				<div class='column' id='logan'>
-					<a href='../team/logan.html'>
-						<div class='overlay'><br><br>Logan</div>
-					</a>
-				</div>
-				<div class='column' id='nic'>
-					<a href='../team/nic.html'>
-						<div class='overlay'><br><br>Nic</div>
-					</a>
-				</div>
-				<div class='column' id='sarah'>
-					<a href='../team/sarah.html'>
-						<div class='overlay'><br><br>Sarah</div>
-					</a>
-				</div>
-			</div>
-			
-			<div style='margin:150px'>
-				<i class='stylepage-link-header'>Why not visit...</i>
-				<h2 class='arrowtext'>Style.html</h2>
-				<div class='arrow-main'><a href='../project-2/style.html'>
-					<div class="heart" style='transform: rotate(-45deg);'></div>
-					<div class="heart" style='transform: rotate(45deg);'></div>
-					<div class="arrow-feathers1" style='transform: rotate(-45deg);'></div>
-					<div class="arrow-shaft"></div>
-					<div class="arrow-feathers1" style='transform: rotate(45deg);'></div>
-				</a>
-				</div>
-			</div>
+		-->
 
-		</body>
+	<div class='row'>
+		<div class='column' id='elias'>
+			<a href='../team/elias.html'>
+				<div class='overlay'><br><br>Elias</div>
+			</a>
+		</div>
+		<div class='column' id='gunnar'>
+			<a href='../team/gunnar.html'>
+				<div class='overlay'><br><br>Gunnar</div>
+			</a>
+		</div>
+		<div class='column' id='jessica'>
+			<a href='../team/jessica.html'>
+				<div class='overlay'><br><br>Jessica</div>
+			</a>
+		</div>
+		<div class='column' id='logan'>
+			<a href='../team/logan.html'>
+				<div class='overlay'><br><br>Logan</div>
+			</a>
+		</div>
+		<div class='column' id='nic'>
+			<a href='../team/nic.html'>
+				<div class='overlay'><br><br>Nic</div>
+			</a>
+		</div>
+		<div class='column' id='sarah'>
+			<a href='../team/sarah.html'>
+				<div class='overlay'><br><br>Sarah</div>
+			</a>
+		</div>
+	</div>
+
+	<div style='margin:150px'>
+		<i class='stylepage-link-header'>Why not visit...</i>
+		<h2 class='arrowtext'>Style.html</h2>
+		<div class='arrow-main'><a href='../project-2/style.html'>
+				<div class="heart" style='transform: rotate(-45deg);'></div>
+				<div class="heart" style='transform: rotate(45deg);'></div>
+				<div class="arrow-feathers1" style='transform: rotate(-45deg);'></div>
+				<div class="arrow-shaft"></div>
+				<div class="arrow-feathers1" style='transform: rotate(45deg);'></div>
+			</a>
+		</div>
+	</div>
+
+
+	<footer class='modal-footer footer-text'><small>&copy; Copyright 2021 &lt;/g4&gt; </small></footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+</body>
+
 </html>

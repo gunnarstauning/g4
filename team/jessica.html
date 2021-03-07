@@ -1,95 +1,100 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="../other/style.css"/> 
-	</head>
 
-	<body>
-		
-		<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px"; width="150px" id="logo"></a>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../other/style.css" />
+</head>
 
-		<div class="navbar" id="navbarBG">
-			<div class="dropdown">
-				<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
-			</div>
+<body>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Our Team&#62;</button>
-				<div class="dropdown-content">
-					<a href="../team/gunnar.html">Gunnar</a>
-					<a href="../team/nic.html">Nic</a>
-					<a href="../team/jessica.html">Jessica</a>
-					<a href="../team/logan.html">Logan</a>
-					<a href="../team/sarah.html">Sarah</a>
-					<a href="../team/elias.html">Elias</a>
-				</div>	
-			</div>
+	<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" ; width="150px" id="logo"></a>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 1&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-1/nested.html">Nested Attributes</a>
-					<a href="../project-1/attributes.html">Favorite Attributes</a>
-					<a href="../project-1/tags.html">Tags</a>
-				</div>
-			</div>	
+	<div class="navbar" id="navbarBG">
+		<div class="dropdown">
+			<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
+		</div>
 
-			<div class="dropdown">
-				<button class="dropbtn">&#60;Project 2&#62;</button>
-				<div class="dropdown-content">
-					<a href="../project-2/style.html">Styles</a>
-				</div>
-			</div>	
-
-			<div class="dropdown">
-				<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Our Team&#62;</button>
+			<div class="dropdown-content">
+				<a href="../team/gunnar.html">Gunnar</a>
+				<a href="../team/nic.html">Nic</a>
+				<a href="../team/jessica.html">Jessica</a>
+				<a href="../team/logan.html">Logan</a>
+				<a href="../team/sarah.html">Sarah</a>
+				<a href="../team/elias.html">Elias</a>
 			</div>
 		</div>
-	</body>
-		<!-- Dark mode button-->
-		<script>
-			var on = window.sessionStorage.getItem("Dark");
-			if(on%2 == 1 ){
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-			}
 
-			function toggleDarkMode() {
-				on++;
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-				if(on%2 == 0){
-					document.getElementById("logo").src = "../Images/logo-dark.png"
-				} else {
-					document.getElementById("logo").src = "../Images/logo-white.png"
-				}
-				sessionStorage.setItem("Dark",on)
-				console.log(on);
-			}
-		</script>
-		<body>
-			<div class= "content-nameplate"> Ye Olde Jessica's Page </div>
-			<hr id='jessHR'>
-			<img id='jessicaimageborder' src= "..\Figures\hottiethottie.png" height= 350px width= 300px>
-			
-				
-				<p class="content-description" id='whereamI'>
-					After wasting away for eons in the land of the begotten (Art Degree), I made haste to begin a perilous journey to escape the trecherous badlands to a brighter future full of hope and prosperity amongst the GIMMians. <br>
-					While the road has been far from easy, 'tis not upon this earth of worth, that hath been accomplished with little effort. And to be honest man this stuff takes a whole lotta effort. :'(
-				</p>
-				<hr id='jessHR'>
-
-			
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 1&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-1/nested.html">Nested Attributes</a>
+				<a href="../project-1/attributes.html">Favorite Attributes</a>
+				<a href="../project-1/tags.html">Tags</a>
 			</div>
-			
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 2&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-2/style.html">Styles</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+		</div>
+	</div>
+</body>
+<!-- Dark mode button-->
+<script>
+	var on = window.sessionStorage.getItem("Dark");
+	if (on % 2 == 1) {
+		var element = document.body;
+		element.classList.toggle("dark-mode")
+		if (on % 2 == 0) {
+			document.getElementById("logo").src = "../Images/logo-dark.png"
+		} else {
+			document.getElementById("logo").src = "../Images/logo-white.png"
+		}
+	}
+
+	function toggleDarkMode() {
+		on++;
+		var element = document.body;
+		element.classList.toggle("dark-mode")
+		if (on % 2 == 0) {
+			document.getElementById("logo").src = "../Images/logo-dark.png"
+		} else {
+			document.getElementById("logo").src = "../Images/logo-white.png"
+		}
+		sessionStorage.setItem("Dark", on)
+		console.log(on);
+	}
+</script>
+
+<body>
+	<div class="content-nameplate"> Ye Olde Jessica's Page </div>
+	<hr id='jessHR'>
+	<img id='jessicaimageborder' src="..\Figures\hottiethottie.png" height=350px width=300px>
 
 
-		</body>
+	<p class="content-description" id='whereamI'>
+		After wasting away for eons in the land of the begotten (Art Degree), I made haste to begin a perilous journey
+		to escape the trecherous badlands to a brighter future full of hope and prosperity amongst the GIMMians. <br>
+		While the road has been far from easy, 'tis not upon this earth of worth, that hath been accomplished with
+		little effort. And to be honest man this stuff takes a whole lotta effort. :'(
+	</p>
+	<hr id='jessHR'>
+
+
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
 
 </html>

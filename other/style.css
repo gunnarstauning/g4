@@ -36,7 +36,7 @@ Everything navbar related \/
 	
 	padding: 8px;
 	font-size: 18px;
-	border-radius: 50%;
+	border-radius: 30%;
 	cursor: pointer;
 	text-decoration: none;
 	font-family: 'Hammersmith One', sans-serif;
@@ -130,6 +130,12 @@ li a:hover {
 .stylehtml-link {
 	text-align: center;
 
+}
+
+.footer-text{
+	font-size: 16px;
+	font-family:  'Hammersmith One', sans-serif;
+	margin: auto;
 }
 
 /*
