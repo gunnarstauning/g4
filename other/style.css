@@ -15,10 +15,9 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-li {
-	float:left;
+.jump-to-list{
+	list-style-type:circle;
 }
-
 
 /* #paper-background {
 	background: url(../Images/landingbackground-paper.png);
@@ -621,4 +620,59 @@ img#loganborder {
 	100% {
 	  transform: translateY(20px);
 	}
+}
+
+/* Footer and Copyright Styles */
+.copyright {
+	/*padding: 28px 0;
+	margin-top: 40px;
+	margin-bottom: 1%;*/
+	background-color:#194473;
+	color: #96bbbb;
+}
+/*.copyright .row{
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.copyright a:hover {
+	color:#96bbbb; 
+}
+  
+.copyright-menu ul {
+	text-align: left;
+	margin: 0; 
+}
+  
+.copyright-menu li {
+	position:relative;
+	display: inline-block;
+	font-family: 'Hammersmith One', sans-serif;
+}
+.copyright-menu a {
+	background-color: rgb(25, 68, 115, 0);
+	color: white;
+	padding: 16px;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+	text-decoration: underline;
+	border-radius: 50%;
+	font-family: 'Hammersmith One', sans-serif;
+}*/
+.footer-content-text{
+	color:#96bbbb;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+	text-decoration: underline;
+	border-radius: 20%;
+	font-family: 'Hammersmith One', sans-serif;
+}
+.footer-content-title{
+	color:#96bbbb;
+	font-size: 22px;
+	font-family: 'Hammersmith One', sans-serif;
+}
+.footer-bg{
+	background-color: #618986;
 }
