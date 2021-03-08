@@ -669,3 +669,25 @@ img#loganborder {
 .footer-bg{
 	background-color: #618986;
 }
+
+/* New Cards for Index */
+.card-link{
+    text-decoration:none;
+    color: #0e2222;
+	font-size: 18px;
+    /*background-color: #194473;*/
+}
+.card-link:hover{
+	color: #f7594e;
+	font-size: 20px;
+}
+.card-list-items{
+	color: #0e2222;
+    background-color: #618986;
+}
+.card-base{
+	font-family: 'Hammersmith One', sans-serif;
+}
+.card-content{
+	font-family: 'Poppins', sans-serif;
+}
