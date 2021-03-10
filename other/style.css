@@ -706,3 +706,11 @@ img#loganborder {
 .button-text:hover{
 	color: #f7594e;
 }
+#submit-button{
+	width: 30%;
+}
+.random-info{
+	font-family: 'Hammersmith One', sans-serif;
+	color: #0e2222;
+	font-size:20px;
+}
