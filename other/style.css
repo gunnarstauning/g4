@@ -698,15 +698,28 @@ img#loganborder {
 	border-color: #f7594e;
 	border-width:5px;
 	border-style: groove;
+	color: #96bbbb;
+	font-family: 'Poppins', sans-serif;
 }
-.button-text{
+.p3-buttons:hover{
+	color: #f7594e;
+}
+.new-p3-buttons{
+	background-color:#96bbbb ;
+	border-color: #d81159;
+	border-width:5px;
+	border-style: groove;
+	color: #0e2222;
+	font-family: 'Hammersmith One', sans-serif;
+}
+/*.button-text{
 	color: #96bbbb;
 	font-family: 'Poppins', sans-serif;
 }
 .button-text:hover{
 	color: #f7594e;
-}
-#submit-button{
+}*/
+#message-submit-button{
 	width: 30%;
 }
 .random-info{
