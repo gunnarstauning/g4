@@ -1,5 +1,10 @@
+var messageText = document.getElementById('message-of-the-day');
+
+var messageSubmitButton = document.getElementById('message-submit-button');
+messageSubmitButton.onclick = function(){
+    setMessageOfTheDay()
+};
+
 function setMessageOfTheDay(){
-    var text = "Message of the Day!";
-    text = document.getElementById('message-of-the-day').value;
-    document.getElementById('message-output').innerHTML = text;
+    document.getElementById('message-output').innerHTML = messageText.value;
 }
