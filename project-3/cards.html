@@ -2,15 +2,61 @@
 <html>
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../other/style.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../other/style.css" />
 </head>
 
 <body>
+	<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" width="150px" id="logo"></a>
 
+	<div class="navbar" id="navbarBG">
+		<div class="dropdown">
+			<a class="dropbtn" href="index.html">&#60;Home&#62;</a>
+		</div>
 
-    <footer class="footer-bg text-center text-lg-start">
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Our Team&#62;</button>
+			<div class="dropdown-content">
+				<a href="../team/gunnar.html">Gunnar</a>
+				<a href="../team/nic.html">Nic</a>
+				<a href="../team/jessica.html">Jessica</a>
+				<a href="../team/logan.html">Logan</a>
+				<a href="../team/sarah.html">Sarah</a>
+				<a href="../team/elias.html">Elias</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 1&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-1/nested.html">Nested Attributes</a>
+				<a href="../project-1/attributes.html">Favorite Attributes</a>
+				<a href="../project-1/tags.html">Tags</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 2&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-2/style.html">Styles</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">&#60;Project 3&#62;</button>
+			<div class="dropdown-content">
+				<a href="../project-3/cards.html">Cards</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+		</div>
+
+	</div>
+
+	<footer class="footer-bg text-center text-lg-start">
 		<div class="container px-4 pt-4">
 			<div class="row ">
 				<div class="col-lg-6 col-md-12 mb-2 mb-md-0">
@@ -70,6 +116,32 @@
 			Copyright © 2021, All Rights Reserved &lt;/g4&gt;
 		</div>
 	</footer>
+	<!-- Dark mode button-->
+	<script>
+		var on = window.sessionStorage.getItem("Dark");
+		if (on % 2 == 1) {
+			var element = document.body;
+			element.classList.toggle("dark-mode")
+			if (on % 2 == 0) {
+				document.getElementById("logo").src = "../Images/logo-dark.png"
+			} else {
+				document.getElementById("logo").src = "../Images/logo-white.png"
+			}
+		}
+
+		function toggleDarkMode() {
+			on++;
+			var element = document.body;
+			element.classList.toggle("dark-mode")
+			if (on % 2 == 0) {
+				document.getElementById("logo").src = "../Images/logo-dark.png"
+			} else {
+				document.getElementById("logo").src = "../Images/logo-white.png"
+			}
+			sessionStorage.setItem("Dark", on)
+			console.log(on);
+		}
+	</script>
 </body>
 
 </html>
