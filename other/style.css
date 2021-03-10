@@ -691,3 +691,18 @@ img#loganborder {
 .card-content{
 	font-family: 'Poppins', sans-serif;
 }
+
+/* Project 3 Styles */
+.p3-buttons{
+	background-color: #194473;
+	border-color: #f7594e;
+	border-width:5px;
+	border-style: groove;
+}
+.button-text{
+	color: #96bbbb;
+	font-family: 'Poppins', sans-serif;
+}
+.button-text:hover{
+	color: #f7594e;
+}

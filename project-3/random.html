@@ -7,12 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="../other/style.css" />
 </head>
 
-<body>
+<div id='paper-background'></div>
+
+<body class='css-selector'>
+
 	<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" width="150px" id="logo"></a>
 
 	<div class="navbar" id="navbarBG">
 		<div class="dropdown">
-			<a class="dropbtn" href="index.html">&#60;Home&#62;</a>
+			<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
 		</div>
 
 		<div class="dropdown">
@@ -46,7 +49,8 @@
 		<div class="dropdown">
 			<button class="dropbtn">&#60;Project 3&#62;</button>
 			<div class="dropdown-content">
-				<a href="../project-3/cards.html">Cards</a>
+				<a href="../project-3/game.html">Game</a>
+				<a href="../project-3/random.html">Random</a>
 			</div>
 		</div>
 
@@ -55,6 +59,46 @@
 		</div>
 
 	</div>
+</body>
+
+
+<!-- Dark mode button-->
+<script>
+	var on = 0;
+	on = window.sessionStorage.getItem("Dark");
+	if (on % 2 == 1) {
+		var element = document.body;
+		element.classList.toggle("dark-mode")
+		if (on % 2 == 0) {
+			document.getElementById("logo").src = "../Images/logo-dark.png"
+		} else {
+			document.getElementById("logo").src = "../Images/logo-white.png"
+		}
+	}
+	function toggleDarkMode() {
+		on++;
+		var element = document.body;
+		element.classList.toggle("dark-mode");
+		if (on % 2 == 0) {
+			document.getElementById("logo").src = "../Images/logo-dark.png"
+		} else {
+			document.getElementById("logo").src = "../Images/logo-white.png"
+		}
+		window.sessionStorage.setItem("Dark", on);
+		console.log(on);
+		console.log(sessionStorage.getItem("Dark"))
+	}
+</script>
+<br>
+
+<body>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button id='html-button' class="btn p3-buttons button-text" type="button">Change an HTML Element</button>
+        <button id='css-button' class="btn p3-buttons button-text" type="button">Change a CSS Element</button>
+    </div>
+
+
+
 
 	<footer class="footer-bg text-center text-lg-start">
 		<div class="container px-4 pt-4">
@@ -116,32 +160,6 @@
 			Copyright © 2021, All Rights Reserved &lt;/g4&gt;
 		</div>
 	</footer>
-	<!-- Dark mode button-->
-	<script>
-		var on = window.sessionStorage.getItem("Dark");
-		if (on % 2 == 1) {
-			var element = document.body;
-			element.classList.toggle("dark-mode")
-			if (on % 2 == 0) {
-				document.getElementById("logo").src = "../Images/logo-dark.png"
-			} else {
-				document.getElementById("logo").src = "../Images/logo-white.png"
-			}
-		}
-
-		function toggleDarkMode() {
-			on++;
-			var element = document.body;
-			element.classList.toggle("dark-mode")
-			if (on % 2 == 0) {
-				document.getElementById("logo").src = "../Images/logo-dark.png"
-			} else {
-				document.getElementById("logo").src = "../Images/logo-white.png"
-			}
-			sessionStorage.setItem("Dark", on)
-			console.log(on);
-		}
-	</script>
 </body>
 
 </html>

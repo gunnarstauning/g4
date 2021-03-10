@@ -8,12 +8,11 @@
 </head>
 
 <body>
-
-	<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" ; width="150px" id="logo"></a>
+	<a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" width="150px" id="logo"></a>
 
 	<div class="navbar" id="navbarBG">
 		<div class="dropdown">
-			<a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
+			<a class="dropbtn" href="index.html">&#60;Home&#62;</a>
 		</div>
 
 		<div class="dropdown">
@@ -55,52 +54,8 @@
 		<div class="dropdown">
 			<button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
 		</div>
-	</div>
-</body>
-<!-- Dark mode button-->
-<script>
-	var on = window.sessionStorage.getItem("Dark");
-	if (on % 2 == 1) {
-		var element = document.body;
-		element.classList.toggle("dark-mode")
-		if (on % 2 == 0) {
-			document.getElementById("logo").src = "../Images/logo-dark.png"
-		} else {
-			document.getElementById("logo").src = "../Images/logo-white.png"
-		}
-	}
-
-	function toggleDarkMode() {
-		on++;
-		var element = document.body;
-		element.classList.toggle("dark-mode")
-		if (on % 2 == 0) {
-			document.getElementById("logo").src = "../Images/logo-dark.png"
-		} else {
-			document.getElementById("logo").src = "../Images/logo-white.png"
-		}
-		sessionStorage.setItem("Dark", on)
-		console.log(on);
-	}
-</script>
-
-<body>
-	<div class="content-nameplate"> Ye Olde Jessica's Page </div>
-	<hr id='jessHR'>
-	<img id='jessicaimageborder' src="..\Figures\hottiethottie.png" height=350px width=300px>
-
-
-	<p class="content-description" id='whereamI'>
-		After wasting away for eons in the land of the begotten (Art Degree), I made haste to begin a perilous journey
-		to escape the trecherous badlands to a brighter future full of hope and prosperity amongst the GIMMians. <br>
-		While the road has been far from easy, 'tis not upon this earth of worth, that hath been accomplished with
-		little effort. And to be honest man this stuff takes a whole lotta effort. :'(
-	</p>
-	<hr id='jessHR'>
-
 
 	</div>
-
 
 	<footer class="footer-bg text-center text-lg-start">
 		<div class="container px-4 pt-4">
@@ -162,6 +117,32 @@
 			Copyright © 2021, All Rights Reserved &lt;/g4&gt;
 		</div>
 	</footer>
+	<!-- Dark mode button-->
+	<script>
+		var on = window.sessionStorage.getItem("Dark");
+		if (on % 2 == 1) {
+			var element = document.body;
+			element.classList.toggle("dark-mode")
+			if (on % 2 == 0) {
+				document.getElementById("logo").src = "../Images/logo-dark.png"
+			} else {
+				document.getElementById("logo").src = "../Images/logo-white.png"
+			}
+		}
+
+		function toggleDarkMode() {
+			on++;
+			var element = document.body;
+			element.classList.toggle("dark-mode")
+			if (on % 2 == 0) {
+				document.getElementById("logo").src = "../Images/logo-dark.png"
+			} else {
+				document.getElementById("logo").src = "../Images/logo-white.png"
+			}
+			sessionStorage.setItem("Dark", on)
+			console.log(on);
+		}
+	</script>
 </body>
 
 </html>
