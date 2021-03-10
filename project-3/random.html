@@ -12,6 +12,7 @@
 <body class='css-selector'>
 
     <a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" width="150px" id="logo"></a>
+    <p id='message-output' class='message-output'>Message of the Day</p>
 
     <div class="navbar" id="navbarBG">
         <div class="dropdown">
@@ -100,7 +101,7 @@
             <input id='message-of-the-day' type="text" class="form-control"
                 placeholder="Write a new message for the day" aria-label="Input group example"
                 aria-describedby="btnGroupAddon">
-            <button id='submit-button' class="btn p3-buttons button-text" type="button">Submit</button>
+            <button id='message-submit-button' class="btn p3-buttons button-text" type="button">Submit</button>
         </div>
         <br>
         <p class='random-info'>Enter 2 numbers below. Make sure the first number is smaller than the second. Once you do that, press the submit button and watch magic pick a random number between the two.</p>
@@ -113,7 +114,7 @@
             <input id='number-2' type="text" class="form-control"
                 placeholder="ex: 174" aria-label="Input group example"
                 aria-describedby="btnGroupAddon">
-            <button id='submit-button' class="btn p3-buttons button-text" type="button">Submit</button>
+            <button id='number-submit-button' class="btn p3-buttons button-text" type="button">Submit</button>
         </div>
     </div>
 
@@ -181,6 +182,7 @@
             Copyright © 2021, All Rights Reserved &lt;/g4&gt;
         </div>
     </footer>
+	<script src='random.js'></script>
 </body>
 
 </html>
