@@ -45,5 +45,3 @@ function setMessageOfTheDay(){
 //Step 3D.
 
 
-
-//GAME
