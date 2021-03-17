@@ -3,9 +3,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
+body {
+    background-color: #e7e7e7;
+}
 canvas {
-    border:1px solid #d3d3d3;
-    background-color: #ececec;
+    border:0px solid #d3d3d3;
+    background-color: #ffffff;
+    border-radius: 15px;
 }
 </style>
 </head>
@@ -13,7 +17,7 @@ canvas {
 <script>
 
 var myScore;
-var enemyStartingSpawnDelay = 400;
+var enemyStartingSpawnDelay = 150;
 var enemyFinalSpawnDelay = 50;
 // Enemies
 var enemies = [];
@@ -43,18 +47,6 @@ document.addEventListener('keydown', function(event) {
     else if (event.keyCode == 83) {
         downKeyDown = 1;
     }
-    else if (event.keyCode == 37) {
-        leftKeyDown = 1;
-    }
-    else if (event.keyCode == 38) {
-        rightKeyDown = 1;
-    }
-    else if (event.keyCode == 39) {
-        upKeyDown = 1;
-    }
-    else if (event.keyCode == 40) {
-        downKeyDown = 1;
-    }
 }, true);
 document.addEventListener('keyup', function(event) {
     if (event.keyCode == 65) {
@@ -77,7 +69,7 @@ window.addEventListener("mousemove", function(event) {
 
 // Start game area and all the objects
 function startGame() {
-    player = new component(35, 35, "red", gameCanvas.canvas.width, gameCanvas.canvas.height/2);
+    player = new component(32, 32, "black", 365, 365);
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     gameCanvas.start();
 }
@@ -234,16 +226,6 @@ function everyinterval(n) {
     return false;
 }
 
-// function accelerate(n) {
-//     player.gravity = n;
-// }
-
 </script>
-
-<!-- <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-<p>Use the ACCELERATE button to stay in the air</p>
-<p>How long can you stay alive?</p> -->
-
 </body>
 </html>
