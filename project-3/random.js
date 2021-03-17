@@ -41,3 +41,9 @@ messageSubmitButton.onclick = function(){
 function setMessageOfTheDay(){
     document.getElementById('message-output').innerHTML = messageText.value;
 }
+
+//Step 3D.
+
+
+
+//GAME
