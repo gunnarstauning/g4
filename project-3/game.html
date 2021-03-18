@@ -22,7 +22,7 @@ var enemyFinalSpawnDelay = 50;
 // Enemies
 var enemies = [];
 var enemySpeed = 2;
-// Player movement related variables
+// Player related variables
 var player;
 var playerAccelSpeed = 0.4;
 var playerTopSpeed = 4;
@@ -32,6 +32,11 @@ var leftKeyDown = 0;
 var rightKeyDown = 0;
 var upKeyDown = 0;
 var downKeyDown = 0;
+// Bullets
+var projectiles = [];
+var projectileSpeed = 10;
+var fireCooldownReset = 10;
+var fireCooldown = 0;
 
 // Set up keypress listeners
 document.addEventListener('keydown', function(event) {
@@ -46,6 +51,23 @@ document.addEventListener('keydown', function(event) {
     }
     else if (event.keyCode == 83) {
         downKeyDown = 1;
+    }
+    // Create new bullet
+    else if (event.keyCode == 37 && fireCooldown <= 0) {
+        projectiles.push(new component(15, 15, "black", player.x + player.width/4, player.y + player.height/4, "projectileLeft"));
+        fireCooldown = fireCooldownReset;
+    }
+    else if (event.keyCode == 38 && fireCooldown <= 0) {
+        projectiles.push(new component(15, 15, "black", player.x + player.width/4, player.y + player.height/4, "projectileUp"));
+        fireCooldown = fireCooldownReset;
+    }
+    else if (event.keyCode == 39 && fireCooldown <= 0) {
+        projectiles.push(new component(15, 15, "black", player.x + player.width/4, player.y + player.height/4, "projectileRight"));
+        fireCooldown = fireCooldownReset;
+    }
+    else if (event.keyCode == 40 && fireCooldown <= 0) {
+        projectiles.push(new component(15, 15, "black", player.x + player.width/4, player.y + player.height/4, "projectileDown"));
+        fireCooldown = fireCooldownReset;
     }
 }, true);
 document.addEventListener('keyup', function(event) {
@@ -69,7 +91,7 @@ window.addEventListener("mousemove", function(event) {
 
 // Start game area and all the objects
 function startGame() {
-    player = new component(32, 32, "black", 365, 365);
+    player = new component(30, 30, "red", 150, 150);
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     gameCanvas.start();
 }
@@ -82,7 +104,7 @@ var gameCanvas = {
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, (16 + 2/3));
+        this.interval = setInterval(updateGameArea, 16+2/3);
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -120,23 +142,32 @@ function component(width, height, color, x, y, type) {
         var otherright = otherobj.x + (otherobj.width);
         var othertop = otherobj.y;
         var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
+        if (this == player && otherobj.type == "enemy") {
+            var crash = true;
+            if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+                crash = false;
+            }
+            return crash;
         }
-        return crash;
     }
 }
 
 function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
-    for (i = 0; i < enemies.length; i += 1) {
+    for (i = 0; i < enemies.length; i++) {
         if (player.crashWith(enemies[i])) {
             return;
         } 
     }
+    // for (i = 0; i < enemies.length; i++) {
+    //     for (i = 0; i < projectiles.length; i++) {
+    //         if (enemies[i].crashWith(projectiles[i])) {
+    //             return;
+    //         }
+    //     } 
+    // }
     gameCanvas.clear();
-    gameCanvas.frameNo += 1;
+    gameCanvas.frameNo++;
 
     // Move player
     if (leftKeyDown == 1) {
@@ -182,32 +213,33 @@ function updateGameArea() {
     player.x += moveX;
     player.y += moveY;
 
-    // player.style.transform = "rotate("+degree+"deg)";
-
+    // Create a new enemy 
     if (gameCanvas.frameNo == 1 || everyinterval(enemyFinalSpawnDelay + Math.floor(enemyStartingSpawnDelay))) {
         
+        // Pick one of the 4 sides at random to spawn at.
         y = Math.random() * gameCanvas.canvas.height;
         var sideToSpawn = Math.random()
         if (sideToSpawn >= 0.00 && sideToSpawn < 0.25) { // left side
-            x = -30; 
+            x = -50; 
             y = Math.random() * gameCanvas.canvas.height;
         }
         if (sideToSpawn >= 0.25 && sideToSpawn < 0.50) { // top side
-            y = -30;
+            y = -50;
             x = Math.random() * gameCanvas.canvas.width;
         } 
         if (sideToSpawn >= 0.50 && sideToSpawn < 0.75) { // right side
-            x = gameCanvas.canvas.width+30;
+            x = gameCanvas.canvas.width+50;
             y = Math.random() * gameCanvas.canvas.height;
         }
         if (sideToSpawn >= 0.75 && sideToSpawn <= 1.00) { // bottom side
-            y = gameCanvas.canvas.height+30;
+            y = gameCanvas.canvas.height+50;
             x = Math.random() * gameCanvas.canvas.width;
         }
-        enemies.push(new component(32, 32, "green", x, y));
+        enemies.push(new component(32, 32, "green", x, y, "enemy"));
         enemyStartingSpawnDelay *= 0.95;
     }
-    for (i = 0; i < enemies.length; i += 1) {
+    // Move each enemy towards the player
+    for (i = 0; i < enemies.length; i++) {
         var dx = player.x - enemies[i].x;
         var dy = player.y - enemies[i].y;
         var angle = Math.atan2(dy, dx)
@@ -215,10 +247,35 @@ function updateGameArea() {
         enemies[i].y += enemySpeed * Math.sin(angle);
         enemies[i].update();
     }
-    myScore.text="SCORE: " + 5;
+    // Move each projectile
+    for (i = 0; i < projectiles.length; i++) {
+        if (projectiles[i].type == "projectileLeft") {
+            projectiles[i].x -= projectileSpeed;
+        }
+        if (projectiles[i].type == "projectileRight") {
+            projectiles[i].x += projectileSpeed;
+        }
+        if (projectiles[i].type == "projectileUp") {
+            projectiles[i].y -= projectileSpeed;
+        }
+        if (projectiles[i].type == "projectileDown") {
+            projectiles[i].y += projectileSpeed;
+        }
+        projectiles[i].update();
+    }
+
     myScore.update();
-    player.newPos();
     player.update();
+    if (fireCooldown < 0) {
+        fireCooldown = 0;
+    }
+    fireCooldown--;
+
+    if ((gameCanvas.frameNo > 20 && gameCanvas.frameNo < 40) || (gameCanvas.frameNo > 60 && gameCanvas.frameNo < 80)) {
+        myScore.text="MOVE WITH WASD";
+    } else {
+        myScore.text="SCORE: " + score;
+    }
 }
 
 function everyinterval(n) {
