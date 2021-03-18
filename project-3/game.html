@@ -232,7 +232,6 @@ function updateGameArea() {
     if (gameCanvas.frameNo == 480) {
         flashMessage(" ");
     }
-
     if (gameCanvas.frameNo > 500) {
         textDisplay1.text = "Time alive: " + score;
     }
@@ -368,8 +367,8 @@ function toggleText() {
     }
 }
 </script>
-<p id='infoButton' style='display: none'>In this game, you play as the red square. Blue squares appear to chase you and end the game once they reach you. You can strafe and fire projectiles that slow down the blue squares.</p>     
-<button class="btn btn-outline-info" type='button' onclick="toggleText()">Click for information</button>
+<p id='infoButton' style='display: none'>In this game, you play as the red square. Blue squares chase you and end the game if they reach you. You can strafe and fire projectiles that slow them down.</p>     
+<button class="btn btn-primary" type='button' onclick="toggleText()">Click for information</button>
 
 
 
