@@ -80,8 +80,12 @@ function newProjectile(type) {
 
 // Start game area and all the objects
 function startGame() {
-    //player = new Image(playerSize, playerSize);
-    //player.src = "Images/DanFace.png";
+
+    //gunnar is working on making dan's face the player. feel free to do so yourself if you can do it
+
+    /*player = new Image(playerSize, playerSize);
+    player.src = "DanFace.png";
+    player.x = 150; player.y = 150; player.type = "player";*/
     player = new component(playerSize, playerSize, "#F7594E", 150, 150, "player");
     textDisplay1 = new component("30px", "Consolas", "#0E2222", 35, 50, "text");
     textDisplay2 = new component("30px", "Consolas", "#0E2222", 35, 90, "text");
