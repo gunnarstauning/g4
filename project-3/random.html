@@ -93,11 +93,11 @@
 <br>
 
 <body>
-    <div class="d-grid gap-2 col-6 mx-auto">
+    <div id='button-grid' class="d-grid gap-2 col-6 mx-auto">
         <button id='html-button' class="btn p3-buttons button-text" type="button">Change an HTML Element</button>
         <button id='css-button' class="btn p3-buttons button-text" type="button">Change a CSS Element</button>
         <div class="input-group">
-            <div class="input-group-text" id="btnGroupAddon">Message of the Day:</div>
+            <div class="input-group-text input-group-text-custom" id="btnGroupAddon">Message of the Day:</div>
             <input id='message-of-the-day' type="text" class="form-control"
                 placeholder="Write a new message for the day" aria-label="Input group example"
                 aria-describedby="btnGroupAddon">
@@ -106,16 +106,19 @@
         <br>
         <p class='random-info'>Enter 2 numbers below. Make sure the first number is smaller than the second. Once you do that, press the submit button and watch magic pick a random number between the two.</p>
         <div class="input-group">
-            <div class="input-group-text" id="btnGroupAddon">First Number:</div>
+            <div class="input-group-text input-group-text-custom" id="btnGroupAddon">First Number:</div>
             <input id='number-1' type="text" class="form-control"
                 placeholder="ex: 25" aria-label="Input group example"
                 aria-describedby="btnGroupAddon">
-            <div class="input-group-text" id="btnGroupAddon">Second Number:</div>
+            <div class="input-group-text input-group-text-custom" id="btnGroupAddon">Second Number:</div>
             <input id='number-2' type="text" class="form-control"
                 placeholder="ex: 174" aria-label="Input group example"
                 aria-describedby="btnGroupAddon">
             <button id='number-submit-button' class="btn p3-buttons button-text" type="button">Submit</button>
         </div>
+        <p id='rand-num-out' class='random-num-out'>Your Random Number Is: </p>
+        <button id='spawn-button' class="btn p3-buttons button-text" type="button">Spawn</button>
+        <br>
     </div>
 
 
@@ -172,7 +175,7 @@
                             <a href="../project-2/style.html" class="footer-content-text">Style</a>
                         </li>
                         <li>
-                            <a href="../project-3/cards.html" class="footer-content-text">Cards</a>
+                            <a href="../project-3/game.html" class="footer-content-text">Game</a>
                         </li>
                     </ul>
                 </div>
