@@ -11,6 +11,8 @@ var difficultyMulitplier = 0.98;
 var enemies = [];
 var enemySize = 30;
 var enemySpeed = 2;
+var rick = new Image();
+rick.src = 'rickPic.jpg';
 // Player related variables
 var player;
 var playerSize = 30;
@@ -22,12 +24,16 @@ var leftKeyDown = 0;
 var rightKeyDown = 0;
 var upKeyDown = 0;
 var downKeyDown = 0;
+var dan = new Image();
+dan.src = 'DanFace.png';
 // Bullets
 var projectiles = [];
 var projectileSize = 15;
 var projectileSpeed = 10;
 var fireCooldownReset = 10;
 var fireCooldown = 0;
+var projectile = new Image();
+projectile.src = 'danProjectile.png';
 
 // Set up keypress listeners
 document.addEventListener('keydown', function (event) {
@@ -100,7 +106,7 @@ var gameCanvas = {
         this.canvas.width = 720;
         this.canvas.height = 720;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        document.body.insertBefore(this.canvas, document.body.childNodes[4]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 17);
     },
@@ -126,9 +132,15 @@ function component(width, height, color, x, y, type) {
             ctx.fillStyle = color;
             ctx.fillText(this.text, this.x, this.y);
         }
-        else {
-            ctx.fillStyle = color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
+        else if(this.type == "enemy"){
+            //console.log("enemy position" + this.x, this.y);
+            ctx.drawImage(rick, this.x, this.y);
+        }
+        else if(this.type == "player"){
+            ctx.drawImage(dan, this.x, this.y);
+        }
+        else{
+            ctx.drawImage(projectile, this.x, this.y);
         }
     }
 
@@ -284,7 +296,9 @@ function updateGameArea() {
             y = gameCanvas.canvas.height + 50;
             x = Math.random() * gameCanvas.canvas.width;
         }
-        enemies.push(new component(enemySize, enemySize, "#194473", x, y, "enemy"));
+        
+        enemies.push(new component(enemySize, enemySize, '#194473', x, y, "enemy"));
+        //enemies.push(new component(rick.width, rick.height,,x,y,"enemy");#194473
         enemiesOnScreen++;
         enemyStartingSpawnDelay *= difficultyMulitplier;
     }
@@ -295,6 +309,8 @@ function updateGameArea() {
         var angle = Math.atan2(dy, dx)
         enemies[i].x += enemySpeed * Math.cos(angle);
         enemies[i].y += enemySpeed * Math.sin(angle);
+        //rick.x = enemies[i].x;
+        //rick.y = enemies[i].y;
         enemies[i].update();
     }
     // Move each projectile
@@ -313,6 +329,7 @@ function updateGameArea() {
         }
         projectiles[i].update();
     }
+    //overlap the image on top of the player
 
     textDisplay1.update();
     textDisplay2.update();
