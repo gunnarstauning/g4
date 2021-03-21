@@ -74,38 +74,49 @@ var numOfDans;
 var dans = new Array();
 
 var danImageInsert = document.getElementById('add-dan-images');
-var buttonGrid = document.getElementById('button-grid')
+var buttonGrid = document.getElementById('button-grid');
+
 var spawnDansButton = document.getElementById('spawn-button');
 spawnDansButton.onclick = function(){
+    clearCurrentArray();
     numOfDans = randomNumber;
+    addDansToList();
     spawnDans();
 }
-function spawnDans(){
-    for(var i = 0; i < numOfDans; i++){
-        dans.push(danImg);
-    }
-    for(var i = 0; i < dans.length; i++){
-        danImageInsert.insertAdjacentElement('afterbegin', dans[0]);
-        console.log(dans[i]);
-    }
-    /*dans.forEach(function(dan) {
-        //console.log(dan);
-        Dan(dan);
-    });*/
+
+function clearCurrentArray(){
+    dans = [];
+    danImageInsert.innerHTML = '';
 }
-function Dan(dan){
+
+function addDansToList(){
+    for(var i = 0; i < numOfDans; i++){
+        Dan();
+    }
+}
+function Dan(){
     var danElement = document.createElement('img');
-    danElement = dan.innerHTML;
-    /*danElement.setAttribute('src', 'DanFace.png');
+    danElement.setAttribute('src', 'DanFace.png');
     danElement.setAttribute('height', '50px');
     danElement.setAttribute('width', '35px');
     danElement.setAttribute('id', 'dan-face');
-    danElement.setAttribute('style', 'margin:5px;')*/
-    //buttonGrid.after(dans);
-    
-    
+    danElement.setAttribute('style', 'margin:5px;')
+    dans.push(danElement);    
+}
+function spawnDans(){
+    for(var i = 0; i < dans.length; i++){
+        danImageInsert.insertAdjacentElement('afterbegin', dans[i]);
+    }
 }
 
+var shakeButton = document.getElementById('shake-button');
+shakeButton.onclick = function(){
+    shakeEmUp();
+}
+
+function shakeEmUp(){
+    
+}
 
 
 
