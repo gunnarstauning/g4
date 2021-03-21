@@ -34,6 +34,13 @@ var fireCooldownReset = 10;
 var fireCooldown = 0;
 var projectile = new Image();
 projectile.src = 'danProjectile.png';
+// Audio
+var loseAudio = new Audio('neverGonnaGiveYouUp.mp3');
+
+// Video End
+var loseVideo = document.createElement('VIDEO');
+loseVideo.src = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+
 
 // Set up keypress listeners
 document.addEventListener('keydown', function (event) {
@@ -198,6 +205,7 @@ function updateGameArea() {
     // Quit game with return if the player collides with an enemy
     for (i = 0; i < enemies.length; i++) {
         if (player.crashWith(enemies[i])) {
+            lose();
             return;
         }
     }
@@ -298,7 +306,6 @@ function updateGameArea() {
         }
         
         enemies.push(new component(enemySize, enemySize, '#194473', x, y, "enemy"));
-        //enemies.push(new component(rick.width, rick.height,,x,y,"enemy");#194473
         enemiesOnScreen++;
         enemyStartingSpawnDelay *= difficultyMulitplier;
     }
@@ -329,7 +336,6 @@ function updateGameArea() {
         }
         projectiles[i].update();
     }
-    //overlap the image on top of the player
 
     textDisplay1.update();
     textDisplay2.update();
@@ -351,3 +357,9 @@ function everyinterval(n) {
     if ((gameCanvas.frameNo / n) % 1 == 0) { return true; }
     return false;
 }
+
+function lose() {
+    console.log("Lose");
+    loseAudio.volume = .1;
+    loseAudio.play();
+  }
