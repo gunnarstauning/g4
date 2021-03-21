@@ -34,12 +34,12 @@ var fireCooldownReset = 10;
 var fireCooldown = 0;
 var projectile = new Image();
 projectile.src = 'danProjectile.png';
-// Audio
+// Lose Stuff
 var loseAudio = new Audio('neverGonnaGiveYouUp.mp3');
-
-// Video End
-var loseVideo = document.createElement('VIDEO');
-loseVideo.src = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+var bigRick = new Image();
+bigRick.src = 'bigRick.png';
+//var loseVideo = new Object();
+//loseVideo.src = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
 
 
 // Set up keypress listeners
@@ -359,7 +359,7 @@ function everyinterval(n) {
 }
 
 function lose() {
-    console.log("Lose");
+    gameCanvas.context.drawImage(bigRick, 0, 0);
     loseAudio.volume = .1;
     loseAudio.play();
-  }
+}
