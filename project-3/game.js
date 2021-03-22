@@ -34,8 +34,14 @@ var fireCooldownReset = 10;
 var fireCooldown = 0;
 var projectile = new Image();
 projectile.src = 'danProjectile.png';
-var bulletAudio = new Audio('bulletSound.mp3');
-bulletAudio.volume = .1;
+var bulletAudioUp = new Audio('bulletSound.mp3');
+bulletAudioUp.volume = .5;
+var bulletAudioDown = new Audio('bulletSound.mp3');
+bulletAudioDown.volume = .5;
+var bulletAudioLeft = new Audio('bulletSound.mp3');
+bulletAudioLeft.volume = .5;
+var bulletAudioRight = new Audio('bulletSound.mp3');
+bulletAudioRight.volume = .5;
 // Lose Stuff
 var loseAudio = new Audio('neverGonnaGiveYouUp.mp3');
 var bigRick = new Image();
@@ -62,19 +68,19 @@ document.addEventListener('keydown', function (event) {
     // Create new bullet
     else if (event.keyCode == 37 && fireCooldown <= 0) {
         newProjectile("projectileLeft");
-        bulletAudio.play();
+        bulletAudioLeft.play();
     }
     else if (event.keyCode == 38 && fireCooldown <= 0) {
         newProjectile("projectileUp");
-        bulletAudio.play();
+        bulletAudioUp.play();
     }
     else if (event.keyCode == 39 && fireCooldown <= 0) {
         newProjectile("projectileRight");
-        bulletAudio.play();
+        bulletAudioRight.play();
     }
     else if (event.keyCode == 40 && fireCooldown <= 0) {
         newProjectile("projectileDown");
-        bulletAudio.play();
+        bulletAudioDown.play();
     }
 }, true);
 document.addEventListener('keyup', function (event) {
@@ -117,10 +123,11 @@ var gameCanvas = {
         document.body.insertBefore(this.canvas, document.body.childNodes[4]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 17);
-        this.context.drawImage(backgroundImg, 0, 0);
+        
     },
     clear: function () {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.drawImage(backgroundImg, 0, 0);
     }
 }
 
@@ -138,7 +145,7 @@ function component(width, height, color, x, y, type) {
         ctx = gameCanvas.context;
         if (this.type == "text") {
             ctx.font = this.width + " " + this.height;
-            ctx.fillStyle = color;
+            ctx.fillStyle = '#96bbbb';
             ctx.fillText(this.text, this.x, this.y);
         }
         else if(this.type == "enemy"){
