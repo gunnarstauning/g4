@@ -34,12 +34,15 @@ var fireCooldownReset = 10;
 var fireCooldown = 0;
 var projectile = new Image();
 projectile.src = 'danProjectile.png';
+var bulletAudio = new Audio('bulletSound.mp3');
+bulletAudio.volume = .1;
 // Lose Stuff
 var loseAudio = new Audio('neverGonnaGiveYouUp.mp3');
 var bigRick = new Image();
 bigRick.src = 'bigRick.png';
-//var loseVideo = new Object();
-//loseVideo.src = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+// Background
+var backgroundImg = new Image();
+backgroundImg.src = 'rickBackground.png';
 
 
 // Set up keypress listeners
@@ -59,15 +62,19 @@ document.addEventListener('keydown', function (event) {
     // Create new bullet
     else if (event.keyCode == 37 && fireCooldown <= 0) {
         newProjectile("projectileLeft");
+        bulletAudio.play();
     }
     else if (event.keyCode == 38 && fireCooldown <= 0) {
         newProjectile("projectileUp");
+        bulletAudio.play();
     }
     else if (event.keyCode == 39 && fireCooldown <= 0) {
         newProjectile("projectileRight");
+        bulletAudio.play();
     }
     else if (event.keyCode == 40 && fireCooldown <= 0) {
         newProjectile("projectileDown");
+        bulletAudio.play();
     }
 }, true);
 document.addEventListener('keyup', function (event) {
@@ -93,12 +100,6 @@ function newProjectile(type) {
 
 // Start game area and all the objects
 function startGame() {
-
-    //gunnar is working on making dan's face the player. feel free to do so yourself if you can do it
-
-    /*player = new Image(playerSize, playerSize);
-    player.src = "DanFace.png";
-    player.x = 150; player.y = 150; player.type = "player";*/
     player = new component(playerSize, playerSize, "#F7594E", 150, 150, "player");
     textDisplay1 = new component("30px", "Consolas", "#0E2222", 35, 50, "text");
     textDisplay2 = new component("30px", "Consolas", "#0E2222", 35, 90, "text");
@@ -116,6 +117,7 @@ var gameCanvas = {
         document.body.insertBefore(this.canvas, document.body.childNodes[4]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 17);
+        this.context.drawImage(backgroundImg, 0, 0);
     },
     clear: function () {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -140,7 +142,6 @@ function component(width, height, color, x, y, type) {
             ctx.fillText(this.text, this.x, this.y);
         }
         else if(this.type == "enemy"){
-            //console.log("enemy position" + this.x, this.y);
             ctx.drawImage(rick, this.x, this.y);
         }
         else if(this.type == "player"){
@@ -221,13 +222,13 @@ function updateGameArea() {
     gameCanvas.clear();
     gameCanvas.frameNo++;
 
-    if (gameCanvas.frameNo == 100) {
+    if (gameCanvas.frameNo == 50) {
         flashMessage("MOVE WITH WASD");
     }
-    if (gameCanvas.frameNo == 280) {
+    if (gameCanvas.frameNo == 220) {
         flashMessage(" ");
     }
-    if (gameCanvas.frameNo == 300) {
+    if (gameCanvas.frameNo == 260) {
         flashMessage("FIRE BULLETS WITH ARROW KEYS");
     }
     if (gameCanvas.frameNo == 480) {
@@ -316,8 +317,6 @@ function updateGameArea() {
         var angle = Math.atan2(dy, dx)
         enemies[i].x += enemySpeed * Math.cos(angle);
         enemies[i].y += enemySpeed * Math.sin(angle);
-        //rick.x = enemies[i].x;
-        //rick.y = enemies[i].y;
         enemies[i].update();
     }
     // Move each projectile
@@ -346,7 +345,7 @@ function updateGameArea() {
         fireCooldown--;
     }
 
-    if (gameCanvas.frameNo % 40 == 0) {
+    if (gameCanvas.frameNo % 60 == 0) {
         score++;
     }
 }
@@ -359,7 +358,16 @@ function everyinterval(n) {
 }
 
 function lose() {
-    gameCanvas.context.drawImage(bigRick, 0, 0);
-    loseAudio.volume = .1;
+    gameCanvas.clear();
+    ctx2 = gameCanvas.context;
+    ctx.drawImage(bigRick, 0, 0);
+    ctx.font = 'bold 28px Courier';
+    ctx.fillStyle = '#96bbbb';
+    ctx.textAlign = 'center';
+    ctx.fillText("You Fought Off The Ricks For: " + score + " Seconds!", 720/2, 720/2);
+    
+    //var videoDiv = document.getElementById("lose-video");
+    //videoDiv.style.display = "block";
+    loseAudio.volume = .05;
     loseAudio.play();
 }
