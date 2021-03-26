@@ -14,18 +14,96 @@
             background-color: #ffffff;
             border-radius: 8px;
             margin-top: 30px;
+            margin-bottom: 15px;
             position: relative;
         }
     </style>
 </head>
 <a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" width="150px" id="logo"></a>
 
-<body onload="startGame()">
-    
+<div class="navbar" id="navbarBG">
+    <div class="dropdown">
+        <a class="dropbtn" href="../other/index.html">&#60;Home&#62;</a>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">&#60;Our Team&#62;</button>
+        <div class="dropdown-content">
+            <a href="../team/gunnar.html">Gunnar</a>
+            <a href="../team/nic.html">Nic</a>
+            <a href="../team/jessica.html">Jessica</a>
+            <a href="../team/logan.html">Logan</a>
+            <a href="../team/sarah.html">Sarah</a>
+            <a href="../team/elias.html">Elias</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">&#60;Project 1&#62;</button>
+        <div class="dropdown-content">
+            <a href="../project-1/nested.html">Nested Attributes</a>
+            <a href="../project-1/attributes.html">Favorite Attributes</a>
+            <a href="../project-1/tags.html">Tags</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">&#60;Project 2&#62;</button>
+        <div class="dropdown-content">
+            <a href="../project-2/style.html">Styles</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">&#60;Project 3&#62;</button>
+        <div class="dropdown-content">
+            <a href="../project-3/game.html">Game</a>
+            <a href="../project-3/random.html">Random</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDarkMode()">&#60;Dark Mode&#62;</button>
+    </div>
+
+</div>
+
+
+<!-- Dark mode button-->
+<script>
+var on = 0;
+on = window.sessionStorage.getItem("Dark");
+if (on % 2 == 1) {
+    var element = document.body;
+    element.classList.toggle("dark-mode")
+    if (on % 2 == 0) {
+        document.getElementById("logo").src = "../Images/logo-dark.png"
+    } else {
+        document.getElementById("logo").src = "../Images/logo-white.png"
+    }
+}
+function toggleDarkMode() {
+    on++;
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    if (on % 2 == 0) {
+        document.getElementById("logo").src = "../Images/logo-dark.png"
+    } else {
+        document.getElementById("logo").src = "../Images/logo-white.png"
+    }
+    window.sessionStorage.setItem("Dark", on);
+    console.log(on);
+    console.log(sessionStorage.getItem("Dark"))
+}
+</script>
+<br>
     <div class="d-grid gap-2 col-6 mx-auto">
         <p id='infoButton' style='display: none'>Star as Dr. Dan, as hordes of the infamous Rick Astley encroach from all angles. Use anything at your disposal to keep them away. Survive as long as you possibly can, but in the end, we all know Dr. Dan cannot escape the meme. No matter what, Never Give Him Up.</p>
         <button class="btn p3-buttons" type='button' onclick="toggleText()">Click for information</button>
     </div>
+<body onload="startGame()">
+    
+
     
 
     
@@ -49,6 +127,69 @@
     </script>
 
     <script src='game.js'></script>
+</body>
+<!--Footer-->
+<footer class="footer-bg text-center text-lg-start">
+    <div class="container px-4 pt-4">
+        <div class="row ">
+            <div class="col-lg-6 col-md-12 mb-2 mb-md-0">
+                <a href="../other/index.html"><img src="../Images/logo-dark.png" padding="300px" width="150px"
+                        id="logo"></a>
+                <h5 class="text-uppercase">Footer Content</h5>
+            </div>
+
+            <div class="col-lg-3 col-md-auto mb-4 px-5">
+                <h5 class="text-uppercase footer-content-title">Team Members</h5>
+                <ul class="list-unstyled mb-0 ">
+                    <li>
+                        <a href="../team/gunnar.html" class="footer-content-text">Gunnar</a>
+                    </li>
+                    <li>
+                        <a href="../team/sarah.html" class="footer-content-text">Sarah</a>
+                    </li>
+                    <li>
+                        <a href="../team/elias.html" class="footer-content-text">Elias</a>
+                    </li>
+                    <li>
+                        <a href="../team/nic.html" class="footer-content-text">Nic</a>
+                    </li>
+                    <li>
+                        <a href="../team/jessica.html" class="footer-content-text">Jessica</a>
+                    </li>
+                    <li>
+                        <a href="../team/logan.html" class="footer-content-text">Logan</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-1 col-md-auto mb-4 ps-5">
+                <h5 class="text-uppercase footer-content-title">Past Projects</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="../project-1/attributes.html" class="footer-content-text">Attributes</a>
+                    </li>
+                    <li>
+                        <a href="../project-1/nested.html" class="footer-content-text">Nested</a>
+                    </li>
+                    <li>
+                        <a href="../project-1/tags.html" class="footer-content-text">Tags</a>
+                    </li>
+                    <li>
+                        <a href="../project-2/style.html" class="footer-content-text">Style</a>
+                    </li>
+                    <li>
+                        <a href="../project-3/cards.html" class="footer-content-text">Cards</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3 copyright">
+        Copyright © 2021, All Rights Reserved &lt;/g4&gt;
+    </div>
+</footer>
+<script src='random.js'></script>
 </body>
 
 </html>
