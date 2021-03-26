@@ -50,6 +50,12 @@ bigRick.src = 'bigRick.png';
 var backgroundImg = new Image();
 backgroundImg.src = 'rickBackground.png';
 
+//prevent screen movement during game
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
 
 // Set up keypress listeners
 document.addEventListener('keydown', function (event) {
