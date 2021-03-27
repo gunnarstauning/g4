@@ -103,7 +103,9 @@ function toggleDarkMode() {
     </div>
 <body onload="startGame()">
     
-
+<div>
+    <button class="btn p3-buttons" type='button' onclick="restartGame()">Restart Game</button>
+</div>
     
 
     
@@ -115,6 +117,11 @@ function toggleDarkMode() {
     <div id='empty-div'></div>
 
     <script>
+//not really restarting the game, it just refreshes the page
+function restartGame(){
+    location.reload();
+}
+
         // Info button
         function toggleText() {
             var text = document.getElementById("infoButton");
