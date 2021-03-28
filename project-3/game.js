@@ -50,6 +50,12 @@ bigRick.src = 'bigRick.png';
 var backgroundImg = new Image();
 backgroundImg.src = 'rickBackground.png';
 
+//prevent screen movement during game
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
 
 // Set up keypress listeners
 document.addEventListener('keydown', function (event) {
@@ -120,7 +126,7 @@ var gameCanvas = {
         this.canvas.width = 720;
         this.canvas.height = 720;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[4]);
+        document.body.insertBefore(this.canvas, document.body.childNodes[11]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 17);
         
